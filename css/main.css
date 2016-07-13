@@ -1,3 +1,17 @@
+/* Globals */
+
+h2 {
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    color: #012340;
+}
+
+p {
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    color: #012340;
+}
+
 /* Navbar area */
 
 .navbar {
@@ -25,7 +39,6 @@
     margin-left: -16px;
     margin-top: 15px;
 }
-
 
 .text-1 {
     font-size: 36pt;
@@ -109,6 +122,9 @@
     max-width: 20px;
 }
 
+.soc-icon {
+    margin: 20px 0 10px 0;
+}
 
 /* Header */
 
@@ -119,4 +135,23 @@
 .center {
     width: 50%;
     margin: 0 auto;
+}
+
+/* Item 1 */
+
+#item1 {
+    background-color: #f2f2f2;
+    box-shadow: 1px 0 7.8px 0.2px rgba(0, 0, 0, 0.8);
+    max-width: 80%;
+    margin-left: auto;
+    position: relative;
+    top: 200px;
+
+}
+
+#video1 {
+    position: relative;
+    top: -140px;
+    min-height: 360px;
+    margin-bottom: -140px;
 }

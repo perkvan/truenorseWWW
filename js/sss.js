@@ -37,7 +37,7 @@ $.fn.sss = function(options) {
 
 	reset_timer = settings.slideShow ? function() {
 	clearTimeout(timer);
-	timer = setTimeout(next_slide, settings.speed);
+	timer = setTimeout(next_slide,settings.speed);
 	} : $.noop;
 
 // Animate Slider
@@ -51,8 +51,8 @@ $.fn.sss = function(options) {
 	animating = true;
 	var target_slide = slides.eq(target);
 
-	target_slide.fadeIn(transition);
-	slides.not(target_slide).fadeOut(transition);
+    slides.not(target_slide).fadeOut(transition).next().delay(500);
+	target_slide.delay(500).fadeIn(transition);
 
 	slider.animate({paddingBottom: get_height(target)}, transition,  function() {
 	animating = false;

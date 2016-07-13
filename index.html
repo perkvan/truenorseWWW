@@ -16,8 +16,8 @@
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,600italic,400italic,300italic' rel='stylesheet' type='text/css'>
+    
 
     <!-- Theme CSS -->
     <link href="css/main.css" rel="stylesheet">
@@ -36,9 +36,9 @@
         $('.slider').sss({
             slideShow : true, // Set to false to prevent SSS from automatically animating.
             startOn : 0, // Slide to display first. Uses array notation (0 = first slide).
-            transition : 400, // Length (in milliseconds) of the fade transition.
-            speed : 3500, // Slideshow speed in milliseconds.
-            showNav : true // Set to false to hide navigation arrows.
+            transition : 1500, // Length (in milliseconds) of the fade transition.
+            speed : 10000, // Slideshow speed in milliseconds.
+            showNav : true, // Set to false to hide navigation arrows.
         });
         });
     </script>
@@ -112,11 +112,46 @@
         </div>
     </div>
 </div>
-   
+  
+<div  id="item1" class="container">
+  <div class="lazyload">
+      <div class="col-sm-6">
+       <div class="row">
+            <h2 class="col-xs-8">GOLDEN</h2>
+            <a class="soc-icon col-xs-1" href="#"><img src="img/Vimeo.png"/></a>
+        </div>
+        <p>Hank is a simple man, he has spent the last fifty years with his loving wife Maria. He is unaccustomed to change and set in his routines. On his fiftieth wedding anniversary Hank arrives home to find that his beloved Maria has passed away. Unable to process the situation Hank falls into his daily routines. A phone call from his daughter reminds Hank of the anniversary and he is determined to have one last perfect day with Maria. At dinner Hank comes to the realization that it is time to say goodbye to his partner.</p>
+      </div>
+      <div class="col-sm-6">
+          <iframe id="video1" src="https://player.vimeo.com/video/63204198" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/63204198">Golden</a> from <a href="https://vimeo.com/user2810479">True Norse Films</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+          <div class="row">
+              <img class="col-sm-4" src="img/laurel-runner-up.png"/>
+              <img class="col-sm-4" src="img/laurel-best-mn.png"/>
+              <img class="col-sm-4" src="img/laurel-canadian-script.png"/>
+          </div>
+      </div>
+  </div>
+</div>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.js"></script>
     
+    <!-- Scroll Magic -->
+    <script src="js/ScrollMagic.js"></script>
+    <!--
+    <script>
+        // init controller
+        var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: 100}});
+
+        // build scenes
+        new ScrollMagic.Scene({triggerElement: "#sec1"})
+                        .setClassToggle("#high1", "active") // add class toggle
+                        .addIndicators() // add indicators (requires plugin)
+                        .addTo(controller);
+    </script>
+    
+    -->
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
