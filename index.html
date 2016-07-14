@@ -37,8 +37,8 @@
             slideShow : true, // Set to false to prevent SSS from automatically animating.
             startOn : 0, // Slide to display first. Uses array notation (0 = first slide).
             transition : 1500, // Length (in milliseconds) of the fade transition.
-            speed : 8000, // Slideshow speed in milliseconds.
-            showNav : true, // Set to false to hide navigation arrows.
+            speed : 7500, // Slideshow speed in milliseconds.
+            showNav : false, // Set to false to hide navigation arrows.
         });
         });
     </script>
@@ -98,22 +98,22 @@
       </nav>
     </div>
     <div id="header">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <div class="slider">
-            <img src="img/diagram-1.png" />
-            <img src="img/diagram-2.png" />
-            <img src="img/diagram-3.png" />
+            <img src="img/diagram-1-v2.png" />
+            <img src="img/diagram-2-v2.png" />
+            <img src="img/diagram-3-v2.png" />
             </div>    
-        </div>
-        <div class="col-sm-6">
-           <div class="center">
-                <img style="height: 500px;" src="img/TRUE%20NORSE.png"/>
-            </div>
         </div>
     </div>
 </div>
      
 <div id="item1" class="container">
+    <div class="showme row">
+        <a href="#video1" class="smoothScroll">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i> scroll to see more <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </a>
+    </div>
     <div class="hideme row">
       <div class="col-sm-6">
           <iframe id="video1" src="https://player.vimeo.com/video/63204198" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -171,7 +171,20 @@
 
             }
 
-        }); 
+        });
+        $('.showme').each( function(i){
+
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height() + '200';
+
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+
+                $(this).animate({'opacity':'0'},750);
+
+            }
+
+        });
 
         });
 
@@ -179,6 +192,9 @@
     </script>
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.js"></script>
+    
+    <!-- Smooth Scroll -->
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
