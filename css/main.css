@@ -1,5 +1,16 @@
 /* Globals */
 
+
+
+section {
+  width: 100%;
+  padding: 0 7%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  height: 100vh;
+}
+
 h2 {
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
@@ -36,9 +47,19 @@ p {
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    font-style: oblique;
+    font-weight: 100;
 }
+
+.showme a {
+    text-decoration: none;
+    color: #012340;
+}
+
 .showme a i {
     display: inline;
+    text-decoration: none;
+    color: #012340;
 }
 
 /* Navbar area */
@@ -51,22 +72,25 @@ p {
     border-radius: 0px;
 }
 
-.navbar-brand {
-    position: relative;
-    left: -20px;
-    width: 220px;
-    height: 120px;
-    margin-top: -20px;
-    background-color: #f2f2f2;
-    box-shadow: 1px 0 7.8px 0.2px rgba(0, 0, 0, 0.8);
-}
+@media only screen and (min-width: 500px) {
+    .navbar-brand {
+        position: relative;
+        left: -20px;
+        width: 220px;
+        height: 120px;
+        margin-top: -20px;
+        background-color: #f2f2f2;
+        box-shadow: 1px 0 7.8px 0.2px rgba(0, 0, 0, 0.8);
+    }
+    
+    #logo {
+        height: 80px;
+        width: 220px;
+        padding-right: 24px;
+        margin-left: -16px;
+        margin-top: 15px;
+    }
 
-#logo {
-    height: 80px;
-    width: 220px;
-    padding-right: 24px;
-    margin-left: -16px;
-    margin-top: 15px;
 }
 
 .text-1 {
@@ -153,9 +177,15 @@ p {
 
 /* Header */
 
+.intro {
+    height: 100vh;
+    background-image: url(/img/bg-1.jpg);
+    background-size: cover;
+}
+
 #header {
-    margin-top: 15%;
-    margin-bottom: 50%;
+    margin-top: 20%;
+    margin-bottom: 45%;
 }
 
 .center {
@@ -163,6 +193,11 @@ p {
     margin: 0 auto;
 }
 
+.main {
+    height: 150vh;
+    margin-top: -15%;
+    
+}
 /* Item 1 */
 
 #item1 {
@@ -187,5 +222,32 @@ p {
 #video2 {
     position: relative;
     min-height: 360px;
+}
+
+
+@media only screen and (max-width: 499px) {
+    
+    .navbar {
+        height: auto;
+    }
+    
+    .navbar-brand {
+        opacity: hidden;
+    }
+    
+    #logo {
+        height: 50px;
+        width: 120px;
+        padding: 0px;
+        margin: -12.5px 0 0 -25px;
+    }
+    
+    .icon-bar {
+        background-color: #012340;
+    }
+    
+    .main {
+        margin-top: -55%;
+    }
 }
 

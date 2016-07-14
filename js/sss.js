@@ -51,8 +51,8 @@ $.fn.sss = function(options) {
 	animating = true;
 	var target_slide = slides.eq(target);
 
-    slides.not(target_slide).fadeOut(transition).next().delay(500);
-	target_slide.delay(500).fadeIn(transition);
+    slides.not(target_slide).fadeOut(transition);
+	target_slide.fadeIn(transition);
 
 	slider.animate({paddingBottom: get_height(target)}, transition,  function() {
 	animating = false;

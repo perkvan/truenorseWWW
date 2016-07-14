@@ -37,7 +37,7 @@
             slideShow : true, // Set to false to prevent SSS from automatically animating.
             startOn : 0, // Slide to display first. Uses array notation (0 = first slide).
             transition : 1500, // Length (in milliseconds) of the fade transition.
-            speed : 7500, // Slideshow speed in milliseconds.
+            speed : 8000, // Slideshow speed in milliseconds.
             showNav : false, // Set to false to hide navigation arrows.
         });
         });
@@ -45,11 +45,7 @@
 </head>
 
 <body>
-<div class="container-fluid">
-   <div class="row">
-	<img style="z-index: 0; position: absolute; width: 100%;" src="img/bg-1.jpg" class="img-responsive">
-   </div>
-</div>
+<section class="intro">
 <div class="container">
     <div class="container example2">
       <nav class="navbar">
@@ -100,63 +96,77 @@
     <div id="header">
         <div class="col-sm-12">
             <div class="slider">
-            <img src="img/diagram-1-v2.png" />
-            <img src="img/diagram-2-v2.png" />
-            <img src="img/diagram-3-v2.png" />
+            <div>
+                <img class="col-md-6" src="img/diagram-1-1.png" />
+                <img class="col-md-6" src="img/diagram-1-2.png" />
+            </div>
+            <div>
+                <img class="col-md-6" src="img/diagram-2-1.png" />
+                <img class="col-md-6" src="img/diagram-2-2.png" />
+            </div>
+                <div>
+                <img class="col-md-6" src="img/diagram-3-1.png" />
+                <img class="col-md-6" src="img/diagram-3-2.png" />
+            </div>
             </div>    
         </div>
     </div>
 </div>
-     
-<div id="item1" class="container">
-    <div class="showme row">
-        <a href="#video1" class="smoothScroll">
-            <i class="fa fa-chevron-down" aria-hidden="true"></i> scroll to see more <i class="fa fa-chevron-down" aria-hidden="true"></i>
-        </a>
-    </div>
-    <div class="hideme row">
-      <div class="col-sm-6">
-          <iframe id="video1" src="https://player.vimeo.com/video/63204198" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          <div class="row">
-              <img class="col-sm-4" src="img/laurel-runner-up.png"/>
-              <img class="col-sm-4" src="img/laurel-best-mn.png"/>
-              <img class="col-sm-4" src="img/laurel-canadian-script.png"/>
+</section>
+<section class="main">
+    <div id="item1" class="container">
+        <div class="showme row">
+            <a href="#video1" class="smoothScroll">keep scrolling</a>
+        </div>
+        <div class="hideme row">
+          <div class="col-sm-6">
+              <iframe id="video1" src="https://player.vimeo.com/video/63204198" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              <div class="row">
+                  <img class="col-xs-4" src="img/laurel-runner-up.png"/>
+                  <img class="col-xs-4" src="img/laurel-best-mn.png"/>
+                  <img class="col-xs-4" src="img/laurel-canadian-script.png"/>
+              </div>
+          </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <h2 class="col-xs-12">GOLDEN</h2>
+                </div>
+                <div class="row">
+                    <h4 class="col-xs-12 oblique">10 min. | Short Film</h4>
+                </div>
+                  <br>
+                <p>Hank is a simple man, he has spent the last fifty years with his loving wife Maria. He is unaccustomed to change and set in his routines. On his fiftieth wedding anniversary Hank arrives home to find that his beloved Maria has passed away. Unable to process the situation Hank falls into his daily routines. A phone call from his daughter reminds Hank of the anniversary and he is determined to have one last perfect day with Maria. At dinner Hank comes to the realization that it is time to say goodbye to his partner.</p>
+            </div>
+        </div>
+        <div id ="item2" class="hideme row">
+            <div class="col-sm-6">
+                <br>
+                <div class="row">
+                    <h2 class="col-xs-12">DR. SMITH'S NATIONAL COMMERCIAL</h2>
+                </div>
+                <div class="row">
+                    <h4 class="col-xs-12 oblique">Director | Commercial</h4>
+                </div>
+                  <br>
+                <p>Hank is a simple man, he has spent the last fifty years with his loving wife Maria. He is unaccustomed to change and set in his routines. On his fiftieth wedding anniversary Hank arrives home to find that his beloved Maria has passed away. Unable to process the situation Hank falls into his daily routines. A phone call from his daughter reminds Hank of the anniversary and he is determined to have one last perfect day with Maria. At dinner Hank comes to the realization that it is time to say goodbye to his partner.</p>
+            </div>
+            <div class="col-sm-6">
+              <iframe id="video2" width="100%" src="https://www.youtube.com/embed/CPkFqDOXRVk" frameborder="0" allowfullscreen></iframe>
           </div>
       </div>
-        <div class="col-sm-6">
-            <div class="row">
-                <h2 class="col-xs-12">GOLDEN</h2>
-            </div>
-            <div class="row">
-                <h4 class="col-xs-12 oblique">10 min. | Short Film</h4>
-            </div>
-              <br>
-            <p>Hank is a simple man, he has spent the last fifty years with his loving wife Maria. He is unaccustomed to change and set in his routines. On his fiftieth wedding anniversary Hank arrives home to find that his beloved Maria has passed away. Unable to process the situation Hank falls into his daily routines. A phone call from his daughter reminds Hank of the anniversary and he is determined to have one last perfect day with Maria. At dinner Hank comes to the realization that it is time to say goodbye to his partner.</p>
-        </div>
     </div>
-    <div id ="item2" class="hideme row">
-        <div class="col-sm-6">
-            <br>
-            <div class="row">
-                <h2 class="col-xs-12">DR. SMITH'S NATIONAL COMMERCIAL</h2>
-            </div>
-            <div class="row">
-                <h4 class="col-xs-12 oblique">Director | Commercial</h4>
-            </div>
-              <br>
-            <p>Hank is a simple man, he has spent the last fifty years with his loving wife Maria. He is unaccustomed to change and set in his routines. On his fiftieth wedding anniversary Hank arrives home to find that his beloved Maria has passed away. Unable to process the situation Hank falls into his daily routines. A phone call from his daughter reminds Hank of the anniversary and he is determined to have one last perfect day with Maria. At dinner Hank comes to the realization that it is time to say goodbye to his partner.</p>
-        </div>
-        <div class="col-sm-6">
-          <iframe id="video2" width="100%" src="https://www.youtube.com/embed/CPkFqDOXRVk" frameborder="0" allowfullscreen></iframe>
-      </div>
-  </div>
-</div>
-
+</section>
+   
     <script>
+        
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+        
     $(document).ready(function() {
+    if(!isMobile) {
 
         /* Every time the window is scrolled ... */
         $(window).scroll( function(){
+            
 
         /* Check the location of each desired element */
         $('.hideme').each( function(i){
@@ -180,14 +190,18 @@
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ){
 
-                $(this).animate({'opacity':'0'},750);
+                $(this).animate({'opacity':'0'},0);
 
             }
 
         });
 
         });
-
+    } else {
+        $('.hideme').each( function(i){ 
+            $(this).animate({'opacity':'1', 'margin-top' : '0%'},750);
+        });
+    }
     });
     </script>
     <!-- jQuery -->
