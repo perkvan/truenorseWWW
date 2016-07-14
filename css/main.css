@@ -6,10 +6,28 @@ h2 {
     color: #012340;
 }
 
+h4 {
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    color: #012340;
+}
+
+h4.oblique {
+    font-style: oblique;
+}
+
 p {
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
     color: #012340;
+}
+
+/* Animation */
+
+.hideme
+{
+    opacity:0;
+    margin-top: 10%;
 }
 
 /* Navbar area */
@@ -122,10 +140,6 @@ p {
     max-width: 20px;
 }
 
-.soc-icon {
-    margin: 20px 0 10px 0;
-}
-
 /* Header */
 
 #header {
@@ -142,16 +156,24 @@ p {
 #item1 {
     background-color: #f2f2f2;
     box-shadow: 1px 0 7.8px 0.2px rgba(0, 0, 0, 0.8);
-    max-width: 80%;
-    margin-left: auto;
     position: relative;
     top: 200px;
-
+    padding: 20px 20px 40px 20px;
 }
 
 #video1 {
     position: relative;
     top: -140px;
     min-height: 360px;
-    margin-bottom: -140px;
+    margin-bottom: -120px;
 }
+
+#item2 {
+    margin-top: 50px;
+}
+
+#video2 {
+    position: relative;
+    min-height: 360px;
+}
+
