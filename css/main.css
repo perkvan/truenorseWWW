@@ -39,7 +39,6 @@ p {
 {
     opacity:0;
     margin-top: 10%;
-    margin-bottom: 5%;
 }
 
 .showme {
@@ -51,16 +50,6 @@ p {
     font-weight: 100;
 }
 
-.showme a {
-    text-decoration: none;
-    color: #012340;
-}
-
-.showme a i {
-    display: inline;
-    text-decoration: none;
-    color: #012340;
-}
 
 /* Navbar area */
 
@@ -181,6 +170,7 @@ p {
     height: 100vh;
     background-image: url(/img/bg-1.jpg);
     background-size: cover;
+    margin: 0 0 -20% 0;
 }
 
 #header {
@@ -195,9 +185,20 @@ p {
 
 .main {
     height: 150vh;
-    margin-top: -15%;
+    margin-top: -20%;
     
 }
+
+.bottom-center {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
 /* Item 1 */
 
 #item1 {
@@ -216,7 +217,7 @@ p {
 }
 
 #item2 {
-    margin-top: 20%;
+    margin-top: 5%;
 }
 
 #video2 {
@@ -247,7 +248,7 @@ p {
     }
     
     .main {
-        margin-top: -55%;
+        margin-top: -47.5%;
     }
 }
 

@@ -110,15 +110,15 @@
             </div>
             </div>    
         </div>
+        <div class="bottom-center showme">
+            <h4 style="color: #f2f2f2; font-weight: 100; font-style: oblique; font-size: 10pt;">scroll down</h4>
+        </div>
     </div>
 </div>
 </section>
-<section class="main">
-    <div id="item1" class="container">
-        <div class="showme row">
-            <a href="#video1" class="smoothScroll">keep scrolling</a>
-        </div>
-        <div class="hideme row">
+   <section class="main">
+    <div id="item1" class="hideme container">
+        <div class="row">
           <div class="col-sm-6">
               <iframe id="video1" src="https://player.vimeo.com/video/63204198" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
               <div class="row">
@@ -138,7 +138,7 @@
                 <p>Hank is a simple man, he has spent the last fifty years with his loving wife Maria. He is unaccustomed to change and set in his routines. On his fiftieth wedding anniversary Hank arrives home to find that his beloved Maria has passed away. Unable to process the situation Hank falls into his daily routines. A phone call from his daughter reminds Hank of the anniversary and he is determined to have one last perfect day with Maria. At dinner Hank comes to the realization that it is time to say goodbye to his partner.</p>
             </div>
         </div>
-        <div id ="item2" class="hideme row">
+        <div id ="item2" class="row">
             <div class="col-sm-6">
                 <br>
                 <div class="row">
@@ -155,7 +155,16 @@
           </div>
       </div>
     </div>
-</section>
+    </section>
+    
+    <footer>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </footer>
    
     <script>
         
@@ -172,12 +181,12 @@
         $('.hideme').each( function(i){
 
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            var bottom_of_window = $(window).scrollTop() + '300' + $(window).height();
 
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ){
 
-                $(this).animate({'opacity':'1', 'margin-top' : '0%'},750);
+                $(this).animate({'opacity':'1', 'margin-top' : '0'},750);
 
             }
 
@@ -185,7 +194,7 @@
         $('.showme').each( function(i){
 
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height() + '200';
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
 
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ){
@@ -199,13 +208,15 @@
         });
     } else {
         $('.hideme').each( function(i){ 
-            $(this).animate({'opacity':'1', 'margin-top' : '0%'},750);
+            $(this).animate({'opacity':'1', 'margin-top' : '0'},0);
+        });
+        
+        $('.showme').each( function(i){
+           $(this).animate({'opacity':'0'},0);
         });
     }
     });
     </script>
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.js"></script>
     
     <!-- Smooth Scroll -->
     <script type="text/javascript" src="js/smoothscroll.js"></script>
