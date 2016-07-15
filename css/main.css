@@ -64,7 +64,7 @@ p {
 @media only screen and (min-width: 500px) {
     .navbar-brand {
         position: relative;
-        left: -20px;
+        left: -5px;
         width: 220px;
         height: 120px;
         margin-top: -20px;
@@ -168,7 +168,7 @@ p {
 
 .intro {
     height: 100vh;
-    background-image: url(/img/bg-1.jpg);
+    background-image: url(/img/DSC00498.jpg);
     background-size: cover;
     margin: 0 0 -20% 0;
 }
@@ -185,7 +185,7 @@ p {
 
 .main {
     height: 150vh;
-    margin-top: -20%;
+    margin-top: -10%;
     
 }
 

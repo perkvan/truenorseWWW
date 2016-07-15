@@ -156,15 +156,6 @@
       </div>
     </div>
     </section>
-    
-    <footer>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </footer>
    
     <script>
         
@@ -186,7 +177,7 @@
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ){
 
-                $(this).animate({'opacity':'1', 'margin-top' : '0'},750);
+                $(this).animate({'opacity':'1', 'margin-top' : '5%'},750);
 
             }
 
@@ -208,7 +199,7 @@
         });
     } else {
         $('.hideme').each( function(i){ 
-            $(this).animate({'opacity':'1', 'margin-top' : '0'},0);
+            $(this).animate({'opacity':'1', 'margin-top' : '5%'},0);
         });
         
         $('.showme').each( function(i){
