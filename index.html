@@ -42,6 +42,12 @@
         });
         });
     </script>
+    <script>
+        $(window).load(function() {
+            // Animate loader off screen
+            $(".se-pre-con").delay('2500').fadeOut("slow");;
+        });
+    </script>
 </head>
 
 <body>
@@ -116,7 +122,7 @@
     </div>
 </div>
 </section>
-   <section class="main">
+<section class="featured">
     <div id="item1" class="hideme container">
         <div class="row">
           <div class="col-sm-6">
@@ -155,7 +161,38 @@
           </div>
       </div>
     </div>
-    </section>
+</section>
+<section id="bg-2">
+    <div class="vertical-center">
+        <div class="col-md-7 col-md-offset-3">
+            <h1 style="color: #012340;">Who we are</h1>
+            <p style="color: #012340; font-weight: 600;">True Norse Films is a production company based out of Minneapolis, MN. True Norse focuses on creating narratives that explore the intricacies of human relationships. We also offer creative approaches to photography and brand storytelling, to enhance your visibility in the online market place. True Norse Films was formed by brothers Kjell and Per Kvanbeck in the winter of 2012.</p>
+        </div>
+    </div>
+</section>
+<section id="gallery">
+    <div id="gallery-body" class="hideme container">
+        <div class="row gallery-row">
+          <div class="col-md-5"><a href="#"><img src="http://placehold.it/580x327"></a></div>
+          <div class="col-md-4"><a href="#"><img src="http://placehold.it/580x412"></a></div>
+          <div class="col-md-3 typography">
+              <h2 style="font-size: 36pt;">CHECK OUT</h2><h2 style="font-size: 28pt;">MORE OF OUR</h2><h2 style="font-size: 28.75pt;">LATEST WORK</h2>
+              <div class="col-xs-12" id="soc-header2">
+                  <a href="#"><img src="img/facebook.png"/></a>
+                  <a href="#"><img src="img/Instagram.png"/></a>
+                  <a href="#"><img src="img/twitter.png"/></a>
+                  <a href="#"><img src="img/Vimeo.png"/></a>
+              </div>
+          </div>
+        </div>
+        <div class="row gallery-row">
+          <div class="col-sm-3"><img src="http://placehold.it/275x200"></div>
+          <div class="col-sm-3"><img src="http://placehold.it/275x200"></div>
+          <div class="col-sm-6"><img src="http://placehold.it/550x200"></div>
+        </div>
+        
+    </div>
+</section>
    
     <script>
         
@@ -171,13 +208,13 @@
         /* Check the location of each desired element */
         $('.hideme').each( function(i){
 
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + '300' + $(window).height();
+            var bottom_of_object = $(this).offset().top;
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
 
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ){
 
-                $(this).animate({'opacity':'1', 'margin-top' : '5%'},750);
+                $(this).animate({'opacity':'1', 'margin-top' : '8%'},750);
 
             }
 
@@ -185,12 +222,12 @@
         $('.showme').each( function(i){
 
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            var bottom_of_window = $(window).scrollTop() + $(window).height() - '300';
 
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ){
 
-                $(this).animate({'opacity':'0'},0);
+                $(this).animate({'opacity':'0', 'margin-top' : '7.5%'},0);
 
             }
 
@@ -199,7 +236,7 @@
         });
     } else {
         $('.hideme').each( function(i){ 
-            $(this).animate({'opacity':'1', 'margin-top' : '5%'},0);
+            $(this).animate({'opacity':'1', 'margin-top' : '0'},0);
         });
         
         $('.showme').each( function(i){
@@ -214,11 +251,13 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    
 
 
 </body>
+    <div class="se-pre-con"><h2 id="load-msg">Loading, thank you for waiting.</h2></div>
 
 </html>
