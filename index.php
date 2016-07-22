@@ -204,9 +204,8 @@ $headers = 'From: '.$email_from."\r\n".
           <div id="navbar2" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="active"><a href="#">Home</a></li>
-              <li class="active"><a href="#">Portfolio</a></li>
-              <li><a href="#">Shop</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact Us</a></li>
               <li>
                  <div id="soc-header">
                       <a href="https://www.facebook.com/True-Norse-Films-447289181993942/"><i class="fa fa-facebook
@@ -246,7 +245,7 @@ $headers = 'From: '.$email_from."\r\n".
     </div>
 </div>
 </section>
-<section class="featured">
+<section id="portfolio" class="featured">
     <div id="featured" class="hideme container">
         <div id="item1" class="row">
           <div class="col-sm-6">
@@ -393,6 +392,8 @@ $headers = 'From: '.$email_from."\r\n".
               <button style="font-family: 'Oswald', sans-serif;" name="submit" type="submit" id="contact-submit" data-submit="...Sending">SUBMIT</button>
             </fieldset>
           </form>
+        <div>
+            <h3 class="result hidden">Thank you, we will be in touch shortly</h3></div>
         </div>
     </div>
 </section>
@@ -406,7 +407,7 @@ $headers = 'From: '.$email_from."\r\n".
 				<p class="footer-links">
 					<a href="#">Home</a>
 					·
-					<a href="#featured">Portfolio</a>
+					<a href="#portfolio">Portfolio</a>
 					·
 					<a href="#bg-3">Contact</a>
 				</p>
@@ -455,6 +456,36 @@ $headers = 'From: '.$email_from."\r\n".
 
 		</footer>
     </section>
+    
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+         $(document).on('submit', '#contact', function()
+         {
+
+          var data = $(this).serialize();
+
+
+          $.ajax({
+
+          type : 'POST',
+          url  : 'contact_form.php',
+          data : data,
+          success :  function(data)
+               {
+              $("#contact").fadeOut(500).hide(function()
+              {
+               $(".result").fadeIn(500).removeClass('hidden').show(function()
+               {});
+              });
+
+               }
+          });
+          return false;
+         });
+
+        });
+    </script>
     
     
     <script>
