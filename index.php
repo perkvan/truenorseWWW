@@ -1,42 +1,136 @@
 <?php
-	if (isset($_POST["submit"])) {
-		$name = $_POST['name'];
-		$email = $_POST['email'];
-		telephone = $_POST['telephone'];
-		$message = $_POST['message'];
-		$from = 'Demo Contact Form'; 
-		$to = 'example@domain.com'; 
-		$subject = 'Message from Contact Demo ';
-		
-		$body ="From: $name\n E-Mail: $email\n Message:\n $message";
-		// Check if name has been entered
-		if (!$_POST['name']) {
-			$errName = 'Please enter your name';
-		}
-		
-		// Check if email has been entered and is valid
-		if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-			$errEmail = 'Please enter a valid email address';
-		}
-		
-		//Check if message has been entered
-		if (!$_POST['message']) {
-			$errMessage = 'Please enter your message';
-		}
-		//Check if simple anti-bot test is correct
-		if ($human !== 5) {
-			$errHuman = 'Your anti-spam is incorrect';
-		}
-// If there are no errors, send the email
-if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
-	if (mail ($to, $subject, $body, $from)) {
-		$result='<div class="alert alert-success">Thank You! I will be in touch</div>';
-	} else {
-		$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
-	}
-}
-	}
-?>
+ 
+if(isset($_POST['email'])) {
+ 
+     
+ 
+    // EDIT THE 2 LINES BELOW AS REQUIRED
+ 
+    $email_to = "truenorsefilms@gmail.com";
+ 
+    $email_subject = "Site Contact";
+ 
+     
+ 
+     
+ 
+    function died($error) {
+ 
+        // your error code can go here
+ 
+        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
+ 
+        echo "These errors appear below.<br /><br />";
+ 
+        echo $error."<br /><br />";
+ 
+        echo "Please go back and fix these errors.<br /><br />";
+ 
+        die();
+ 
+    }
+ 
+     
+ 
+    // validation expected data exists
+ 
+    if(!isset($_POST['name']) ||
+ 
+        !isset($_POST['website']) ||
+ 
+        !isset($_POST['email']) ||
+ 
+        !isset($_POST['telephone']) ||
+ 
+        !isset($_POST['comments'])) {
+ 
+        died('We are sorry, but there appears to be a problem with the form you submitted.');       
+ 
+    }
+ 
+     
+ 
+    $name = $_POST['name']; // required
+ 
+    $email_from = $_POST['email']; // required
+    
+    $website = $_POST['website']; // required
+ 
+    $telephone = $_POST['telephone']; // not required
+ 
+    $comments = $_POST['comments']; // required
+ 
+     
+ 
+    $error_message = "";
+ 
+    $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+ 
+  if(!preg_match($email_exp,$email_from)) {
+ 
+    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+ 
+  }
+ 
+    $string_exp = "/^[A-Za-z .'-]+$/";
+ 
+  if(!preg_match($string_exp,$name)) {
+ 
+    $error_message .= 'The Name you entered does not appear to be valid.<br />';
+ 
+  }
+ 
+  if(strlen($comments) < 2) {
+ 
+    $error_message .= 'The Comments you entered do not appear to be valid.<br />';
+ 
+  }
+ 
+  if(strlen($error_message) > 0) {
+ 
+    died($error_message);
+ 
+  }
+ 
+    $email_message = "Form details below.\n\n";
+ 
+     
+ 
+    function clean_string($string) {
+ 
+      $bad = array("content-type","bcc:","to:","cc:","href");
+ 
+      return str_replace($bad,"",$string);
+ 
+    }
+ 
+     
+ 
+    $email_message .= "Name: ".clean_string($name)."\n";
+ 
+    $email_message .= "Website: ".clean_string($website)."\n";
+ 
+    $email_message .= "Email: ".clean_string($email_from)."\n";
+ 
+    $email_message .= "Telephone: ".clean_string($telephone)."\n";
+ 
+    $email_message .= "Comments: ".clean_string($comments)."\n";
+ 
+     
+ 
+     
+ 
+// create email headers
+ 
+$headers = 'From: '.$email_from."\r\n".
+ 
+'Reply-To: '.$email_from."\r\n" .
+ 
+'X-Mailer: PHP/' . phpversion();
+ 
+@mail($email_to, $email_subject, $email_message, $headers);  
+ 
+}?>
 
 
 <!DOCTYPE html>
@@ -53,7 +147,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
     <title>True Norse</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -61,6 +155,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
 
     <!-- Theme CSS -->
     <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/sss.css" type="text/css" media="all">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -68,9 +163,8 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
     <script src="js/sss.js"></script>
-    <link rel="stylesheet" href="css/sss.css" type="text/css" media="all">
     <script>
         jQuery(function($) {
         $('.slider').sss({
@@ -104,18 +198,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="http://truenorsefilms.com">
-                     <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 100">
-                      <title>TrueNorse</title>
-                      <g id="Layer_2" data-name="Layer 2">
-                        <g id="Layer_1-2" data-name="Layer 1">
-                          <text class="text-1" transform="translate(-66 83.5)">TRUE</text>
-                          <line class="cls-1" x1="16.38" x2="16.38" y1="83.46"/>
-                          <line class="cls-2" y2="27.73" x1="16.41" y1="11.32"/>
-                          <line class="cls-3" x2="26.63" y2="65.91" x1="16.29" y1="55.57"/>
-                           <text class="text-1" transform="translate(30 83.5)">NORSE</text>
-                        </g>
-                      </g>
-                    </svg>
+                <img id="logo" src="/test/img/True-Norse-black.png"/>
             </a>
           </div>
           <div id="navbar2" class="navbar-collapse collapse">
@@ -126,10 +209,11 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
               <li><a href="#">Contact Us</a></li>
               <li>
                  <div id="soc-header">
-                      <a href="#"><img src="img/facebook.png"/></a>
-                      <a href="#"><img src="img/Instagram.png"/></a>
-                      <a href="#"><img src="img/twitter.png"/></a>
-                      <a href="#"><img src="img/Vimeo.png"/></a>
+                      <a href="https://www.facebook.com/True-Norse-Films-447289181993942/"><i class="fa fa-facebook
+                          "></i></a>
+                      <a href="https://www.instagram.com/truenorsefilms/"><i class="fa fa-instagram"></i></a>
+                      <a href="https://twitter.com/kkvanbeck"><i class="fa fa-twitter"></i></a>
+                      <a href="https://vimeo.com/user2810479"><i class="fa fa-vimeo"></i></a>
                   </div>
               </li>
             </ul>
@@ -143,16 +227,16 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
         <div class="col-sm-12">
             <div class="slider">
             <div>
-                <img class="col-md-6" src="img/diagram-1-1.png" />
-                <img class="col-md-6" src="img/diagram-1-2.png" />
+                <img class="col-md-6" src="/test/img/diagram-1-1.png" />
+                <img class="col-md-6" src="/test/img/diagram-1-2.png" />
             </div>
             <div>
-                <img class="col-md-6" src="img/diagram-2-1.png" />
-                <img class="col-md-6" src="img/diagram-2-2.png" />
+                <img class="col-md-6" src="/test/img/diagram-2-1.png" />
+                <img class="col-md-6" src="/test/img/diagram-2-2.png" />
             </div>
                 <div>
-                <img class="col-md-6" src="img/diagram-3-1.png" />
-                <img class="col-md-6" src="img/diagram-3-2.png" />
+                <img class="col-md-6" src="/test/img/diagram-3-1.png" />
+                <img class="col-md-6" src="/test/img/diagram-3-2.png" />
             </div>
             </div>    
         </div>
@@ -168,9 +252,9 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
           <div class="col-sm-6">
               <iframe id="video1" src="https://player.vimeo.com/video/63204198" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
               <div class="row">
-                  <img class="col-xs-4" src="img/laurel-runner-up.png"/>
-                  <img class="col-xs-4" src="img/laurel-best-mn.png"/>
-                  <img class="col-xs-4" src="img/laurel-canadian-script.png"/>
+                  <img class="col-xs-4" src="/test/img/laurel-runner-up.png"/>
+                  <img class="col-xs-4" src="/test/img/laurel-best-mn.png"/>
+                  <img class="col-xs-4" src="/test/img/laurel-canadian-script.png"/>
               </div>
           </div>
           <div class="col-sm-6">
@@ -182,6 +266,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
             </div>
               <br>
             <p>Hank is a simple man, he has spent the last fifty years with his loving wife Maria. He is unaccustomed to change and set in his routines. On his fiftieth wedding anniversary Hank arrives home to find that his beloved Maria has passed away. Unable to process the situation Hank falls into his daily routines. A phone call from his daughter reminds Hank of the anniversary and he is determined to have one last perfect day with Maria. At dinner Hank comes to the realization that it is time to say goodbye to his partner.</p>
+            <p><a href="https://youtu.be/BbmS-NOgZIk">Click here to see an interview with Kjell Kvanbeck and Justin Newcomb.</a></p>
           </div>
         </div>
         <div id ="item2" class="row">
@@ -197,7 +282,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
                     <h4 class="col-xs-12 oblique">Director | Commercial</h4>
                 </div>
                   <br>
-                <p>Hank is a simple man, he has spent the last fifty years with his loving wife Maria. He is unaccustomed to change and set in his routines. On his fiftieth wedding anniversary Hank arrives home to find that his beloved Maria has passed away. Unable to process the situation Hank falls into his daily routines. A phone call from his daughter reminds Hank of the anniversary and he is determined to have one last perfect day with Maria. At dinner Hank comes to the realization that it is time to say goodbye to his partner.</p>
+                <p>Kjell directed Reach for the Doctor for Mission Pharmacal and the Deberry Group as part of their Reach for the Doctor campaign. Filmed on location in Fort Lauderdale Florida the spot was launched in the summer of 2016 across the United States and Mexico.</p>
             </div>
         </div>
         <div id ="item3" class="row">
@@ -221,17 +306,17 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
 </section>
 <section id="bg-2">
     <div class="vertical-center">
-        <div class="col-md-6 col-md-offset-4">
+        <div class="col-md-6 col-md-offset-3">
             <h1 style="color: #012340;">Who we are</h1>
             <p style="color: #012340; font-weight: 600;">True Norse Films is a production company based out of Minneapolis, MN. True Norse focuses on creating narratives that explore the intricacies of human relationships. We also offer creative approaches to photography and brand storytelling, to enhance your visibility in the online market place. True Norse Films was formed by brothers Kjell and Per Kvanbeck in the winter of 2012.</p>
         </div>
     </div>
 </section>
 <section id="gallery">
-    <div >
+    <div class="container">
         <h1 style="text-align: center;">More Work</h1>
         <ul id="myContent"> 			
-            <li><div class="effect-moses"><img src="/img/proj/raidho-2.png" alt="" />
+            <li><div class="effect-moses"><img src="/test/img/proj/raidho-2.png" alt="" />
                 <figcaption>
 							<h2>Raidho</h2>
 							<p>5 min | Short Film</p>
@@ -239,7 +324,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
 						</figcaption>
                 </div>
             </li>
-            <li><div class="effect-moses"><img src="/img/proj/deeply-2.png" alt="" />
+            <li><div class="effect-moses"><img src="/test/img/proj/deeply-2.png" alt="" />
                 <figcaption>
 							<h2>Deeply</h2>
 							<p>3 min | Short Film</p>
@@ -247,15 +332,15 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
 						</figcaption>
                 </div>
             </li>
-            <li><div class="effect-moses"><img src="/img/proj/face.jpg" alt="" />
+            <li><div class="effect-moses"><img src="/test/img/proj/face-v2.jpg" alt="" />
                 <figcaption>
-							<h2 style="text-align: right;">Air Between Us</h2>
-							<p style="text-align: right;">9 min | Short Film</p>
+							<h2>Air Between Us</h2>
+							<p>9 min | Short Film</p>
 							<a href="https://player.vimeo.com/video/121327040" target="_blank">View more</a>
 						</figcaption>
                 </div>
             </li>
-            <li><div class="effect-moses"><img src="/img/proj/fra-asken.png" alt="" />
+            <li><div class="effect-moses"><img src="/test/img/proj/fra-asken.png" alt="" />
                 <figcaption>
 							<h2>Fra Asken</h2>
 							<p>11 min | Short Film</p>
@@ -263,27 +348,19 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
 						</figcaption>
                 </div>
             </li>
-            <li><div class="effect-moses"><img src="/img/proj/2015-beard-cont.jpg" alt="" />
+            <li><div class="effect-moses"><img src="/test/img/proj/2015-beard-cont-v2.jpg" alt="" />
                 <figcaption>
 							<h2>MBMC Contest</h2>
-							<p>3 min | Short</p>
+							<p>3 min | Event</p>
 							<a href="https://player.vimeo.com/video/130943487" target="_blank">View more</a>
 						</figcaption>
                 </div>
             </li>
-            <li><div class="effect-moses"><img src="/img/proj/living-narrative.jpg" alt="" />
+            <li><div class="effect-moses"><img src="/test/img/proj/living-narrative.jpg" alt="" />
                 <figcaption>
 							<h2>Living Narrative</h2>
 							<p>1 min | Commercial</p>
 							<a href="https://player.vimeo.com/video/138341234" target="_blank">View more</a>
-						</figcaption>
-                </div>
-            </li>
-            <li><div class="effect-moses"><img src="/img/proj/2015-beard-cont.jpg" alt="" />
-                <figcaption>
-							<h2></h2>
-							<p>3 min | Short</p>
-							<a href="https://player.vimeo.com/video/130943487" target="_blank">View more</a>
 						</figcaption>
                 </div>
             </li>
@@ -292,68 +369,92 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
 </section>
     
 <section id="bg-3">
-    <div class="container">
-  		<div class="row">
-  			<div class="col-md-6 col-md-offset-3">
-  				<h1 class="page-header text-center">Contact Form Example</h1>
-				<form class="form-horizontal" role="form" method="post" action="index.php">
-					<div class="form-group">
-						<label for="name" class="col-sm-2 control-label">Name</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
-							<?php echo "<p class='text-danger'>$errName</p>";?>
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="email" class="col-sm-2 control-label">Email</label>
-						<div class="col-sm-10">
-							<input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="<?php echo htmlspecialchars($_POST['email']); ?>">
-							<?php echo "<p class='text-danger'>$errEmail</p>";?>
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="message" class="col-sm-2 control-label">Message</label>
-						<div class="col-sm-10">
-							<textarea class="form-control" rows="4" name="message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
-							<?php echo "<p class='text-danger'>$errMessage</p>";?>
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
-							<?php echo "<p class='text-danger'>$errHuman</p>";?>
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-10 col-sm-offset-2">
-							<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-10 col-sm-offset-2">
-							<?php echo $result; ?>	
-						</div>
-					</div>
-				</form> 
-			</div>
-		</div>
-	</div> 
-</section>
-    
-<section class="footer">
-    <div id="footer" class="container">
-        <div class="row">
-          <div class="col-sm-6">
-              <a href="#">Link1</a>
-              <a href="#">Link1</a>
-              <a href="#">Link1</a>
-              <a href="#">Link1</a>
-            </div>
-      </div>
+    <div class="vertical-center row">
+        <div class="container">  
+          <form id="contact" action="index.php" method="post">
+            <h2>Say Hello!</h2>
+            <h4>Tell us about your project today!</h4>
+            <fieldset>
+              <input name="name" placeholder="Your name" type="text" tabindex="1" required>
+            </fieldset>
+            <fieldset>
+              <input name="email" placeholder="Your Email Address" type="email" tabindex="2" required>
+            </fieldset>
+            <fieldset>
+              <input name="telephone" placeholder="Your Phone Number (optional)" type="tel" tabindex="3">
+            </fieldset>
+            <fieldset>
+              <input name="website" placeholder="Your Web Site (optional)" type="url" tabindex="4">
+            </fieldset>
+            <fieldset>
+              <textarea name="comments" placeholder="Type your message here...." tabindex="5" required></textarea>
+            </fieldset>
+            <fieldset>
+              <button style="font-family: 'Oswald', sans-serif;" name="submit" type="submit" id="contact-submit" data-submit="...Sending">SUBMIT</button>
+            </fieldset>
+          </form>
+        </div>
     </div>
 </section>
-   
+   <section class="container">
+    <footer class="footer-distributed">
+
+			<div class="footer-left">
+                
+                <img style="height: 100px;width: auto;" src="/test/img/True-Norse-black.png" />
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#featured">Portfolio</a>
+					·
+					<a href="#bg-3">Contact</a>
+				</p>
+
+				<p class="footer-company-name">True Norse Films&copy; 2015</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p>Minneapolis, MN</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>(952) 221-6673</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">truenorsefilms@gmail.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					True Norse Films was established by brothers Kjell and Per Kvanbeck. Dedicated to creating high quality narrative and helping grow and develop businesses through media presence.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="https://www.facebook.com/True-Norse-Films-447289181993942/"><i class="fa fa-facebook"></i></a>
+                      <a href="https://www.instagram.com/truenorsefilms/"><i class="fa fa-instagram"></i></a>
+                      <a href="https://twitter.com/kkvanbeck"><i class="fa fa-twitter"></i></a>
+                      <a href="https://vimeo.com/user2810479"><i class="fa fa-vimeo"></i></a>
+
+				</div>
+
+			</div>
+        
+        <p style="text-align: center; font-style: oblique; font-size: 9pt;">This website Designed and Developed by True Norse Productions.</p>
+
+		</footer>
+    </section>
     
     
     <script>
@@ -408,13 +509,14 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
     });
     </script>
     
+    
     <!-- Smooth Scroll -->
     <script type="text/javascript" src="js/smoothscroll.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
     
 

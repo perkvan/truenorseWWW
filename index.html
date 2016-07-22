@@ -52,7 +52,7 @@
 <body>
 <section class="intro">
 <div class="container">
-    <div class="container example2">
+    <div class="container">
       <nav class="navbar">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -63,25 +63,13 @@
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="http://truenorsefilms.com">
-                     <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 100">
-                      <title>TrueNorse</title>
-                      <g id="Layer_2" data-name="Layer 2">
-                        <g id="Layer_1-2" data-name="Layer 1">
-                          <text class="text-1" transform="translate(-66 83.5)">TRUE</text>
-                          <line class="cls-1" x1="16.38" x2="16.38" y1="83.46"/>
-                          <line class="cls-2" y2="27.73" x1="16.41" y1="11.32"/>
-                          <line class="cls-3" x2="26.63" y2="65.91" x1="16.29" y1="55.57"/>
-                           <text class="text-1" transform="translate(30 83.5)">NORSE</text>
-                        </g>
-                      </g>
-                    </svg>
+                <img id="logo" src="/img/True-Norse-black.png"/>
             </a>
           </div>
           <div id="navbar2" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="active"><a href="#">Home</a></li>
-              <li class="active"><a href="#">Portfolio</a></li>
-              <li><a href="#">Shop</a></li>
+              <li><a href="#">Portfolio</a></li>
               <li><a href="#">Contact Us</a></li>
               <li>
                  <div id="soc-header">
@@ -180,7 +168,7 @@
 </section>
 <section id="bg-2">
     <div class="vertical-center">
-        <div class="col-md-6 col-md-offset-4">
+        <div class="col-md-6 col-md-offset-3">
             <h1 style="color: #012340;">Who we are</h1>
             <p style="color: #012340; font-weight: 600;">True Norse Films is a production company based out of Minneapolis, MN. True Norse focuses on creating narratives that explore the intricacies of human relationships. We also offer creative approaches to photography and brand storytelling, to enhance your visibility in the online market place. True Norse Films was formed by brothers Kjell and Per Kvanbeck in the winter of 2012.</p>
         </div>
@@ -206,10 +194,10 @@
 						</figcaption>
                 </div>
             </li>
-            <li><div class="effect-moses"><img src="/img/proj/face.jpg" alt="" />
+            <li><div class="effect-moses"><img src="/img/proj/face-v2.jpg" alt="" />
                 <figcaption>
-							<h2 style="text-align: right;">Air Between Us</h2>
-							<p style="text-align: right;">9 min | Short Film</p>
+							<h2>Air Between Us</h2>
+							<p>9 min | Short Film</p>
 							<a href="https://player.vimeo.com/video/121327040" target="_blank">View more</a>
 						</figcaption>
                 </div>
@@ -222,7 +210,7 @@
 						</figcaption>
                 </div>
             </li>
-            <li><div class="effect-moses"><img src="/img/proj/2015-beard-cont.jpg" alt="" />
+            <li><div class="effect-moses"><img src="/img/proj/2015-beard-cont-v2.jpg" alt="" />
                 <figcaption>
 							<h2>MBMC Contest</h2>
 							<p>3 min | Event</p>
@@ -243,48 +231,90 @@
 </section>
     
 <section id="bg-3">
-    <div class="vertical-center container">
+    <div class="vertical-center row">
         <div class="container">  
-          <form id="contact" action="" method="post">
-            <h3>Colorlib Contact Form</h3>
-            <h4>Contact us for custom quote</h4>
+          <form id="contact" action="index.php" method="post">
+            <h2>Say Hello!</h2>
+            <h4>Tell us about your project today!</h4>
             <fieldset>
-              <input placeholder="Your name" type="text" tabindex="1" required>
+              <input name="name" placeholder="Your name" type="text" tabindex="1" required>
             </fieldset>
             <fieldset>
-              <input placeholder="Your Email Address" type="email" tabindex="2" required>
+              <input name="email" placeholder="Your Email Address" type="email" tabindex="2" required>
             </fieldset>
             <fieldset>
-              <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3">
+              <input name="telephone" placeholder="Your Phone Number (optional)" type="tel" tabindex="3">
             </fieldset>
             <fieldset>
-              <input placeholder="Your Web Site (optional)" type="url" tabindex="4">
+              <input name="website" placeholder="Your Web Site (optional)" type="url" tabindex="4">
             </fieldset>
             <fieldset>
-              <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+              <textarea name="comments" placeholder="Type your message here...." tabindex="5" required></textarea>
             </fieldset>
             <fieldset>
-              <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+              <button style="font-family: 'Oswald', sans-serif;" name="submit" type="submit" id="contact-submit" data-submit="...Sending">SUBMIT</button>
             </fieldset>
-            <p class="copyright">Designed by <a href="https://colorlib.com" target="_blank" title="Colorlib">Colorlib</a></p>
           </form>
         </div>
     </div>
 </section>
-    
-<section class="footer">
-    <div id="footer" class="container">
-        <div class="row">
-          <div class="col-sm-6">
-              <a href="#">Link1</a>
-              <a href="#">Link1</a>
-              <a href="#">Link1</a>
-              <a href="#">Link1</a>
-            </div>
-      </div>
-    </div>
-</section>
-   
+   <section class="container">
+    <footer class="footer-distributed">
+
+			<div class="footer-left">
+                
+                <img style="height: 100px;width: auto;" src="img/True-Norse-black.png" />
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">Portfolio</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">True Norse Films&copy; 2015</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p>Minneapolis, MN</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>(651) 343-3562</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">truenorsefilms@gmail.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					True Norse Films was established by brothers Kjell and Per Kvanbeck. Dedicated to creating high quality narrative and helping grow and develop businesses through media presence.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+    </section>
     
     
     <script>
@@ -338,6 +368,7 @@
     }
     });
     </script>
+    
     
     <!-- Smooth Scroll -->
     <script type="text/javascript" src="js/smoothscroll.js"></script>
