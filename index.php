@@ -171,20 +171,14 @@ $headers = 'From: '.$email_from."\r\n".
             slideShow : true, // Set to false to prevent SSS from automatically animating.
             startOn : 0, // Slide to display first. Uses array notation (0 = first slide).
             transition : 1500, // Length (in milliseconds) of the fade transition.
-            speed : 8000, // Slideshow speed in milliseconds.
+            speed : 6500, // Slideshow speed in milliseconds.
             showNav : false, // Set to false to hide navigation arrows.
         });
         });
     </script>
-    <script>
-        $(window).load(function() {
-            // Animate loader off screen
-            $(".se-pre-con").fadeOut("slow");;
-        });
-    </script>
 </head>
 
-<body>
+<body class="preload">
 <section class="intro">
 <div class="container">
     <div class="container example2">
@@ -198,13 +192,14 @@ $headers = 'From: '.$email_from."\r\n".
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="http://truenorsefilms.com">
-                <img id="logo" src="/test/img/True-Norse-black.png"/>
+                <img id="logo" src="img/True-Norse-black.png"/>
             </a>
           </div>
           <div id="navbar2" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="/test/project-template.html">Example Proj.</a></li>
               <li><a href="#contact">Contact Us</a></li>
               <li>
                  <div id="soc-header">
@@ -249,7 +244,7 @@ $headers = 'From: '.$email_from."\r\n".
     <div id="featured" class="hideme container">
         <div id="item1" class="row">
           <div class="col-sm-6">
-              <iframe id="video1" src="https://player.vimeo.com/video/63204198" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              <video playsinline muted autoplay loop poster id="video1" src="https://player.vimeo.com/external/63204198.hd.mp4?s=6e7aa97f997713aa9a42a29387b8f8d352549f36&profile_id=113" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></video>
               <div class="row">
                   <img class="col-xs-4" src="/test/img/laurel-runner-up.png"/>
                   <img class="col-xs-4" src="/test/img/laurel-best-mn.png"/>
@@ -257,8 +252,8 @@ $headers = 'From: '.$email_from."\r\n".
               </div>
           </div>
           <div class="col-sm-6">
-            <div class="row">
-                <h2 class="col-xs-12">GOLDEN</h2>
+            <div style="margin-top: -20px;" class="row">
+                <h1 style="font-size: 32pt;" class="col-xs-12">GOLDEN</h1>
             </div>
             <div class="row">
                 <h4 class="col-xs-12 oblique">10 min. | Short Film</h4>
@@ -274,8 +269,10 @@ $headers = 'From: '.$email_from."\r\n".
             </div>
             <div class="col-sm-6 col-sm-pull-6">
                 <br>
+                <br>
+                <br>
                 <div class="row">
-                    <h2 class="col-xs-12">DR. SMITH'S NATIONAL COMMERCIAL</h2>
+                    <h1 style="font-size: 32pt;" class="col-xs-12">DR. SMITH'S NATIONAL COMMERCIAL</h1>
                 </div>
                 <div class="row">
                     <h4 class="col-xs-12 oblique">Director | Commercial</h4>
@@ -290,14 +287,14 @@ $headers = 'From: '.$email_from."\r\n".
           </div>
             <div class="col-sm-6">
                 <div class="row">
-                    <h2 class="col-xs-12">THE RED LOOKING GLASS</h2>
+                    <h1 style="font-size: 32pt;" class="col-xs-12">THE RED LOOKING GLASS</h1>
                 </div>
                 <div class="row">
                     <h4 class="col-xs-12 oblique">Director/DP | Music Narrative</h4>
                 </div>
                   <br>
                 <p>Order vinyl and buy the new digital album at <a href="https://www.reflectivore.bandcamp.com">reflectivore.bandcamp.com</a> now.</p>
-                <p>The Red Looking Glass short film is a collaboration between Reflectivore and True Norse Films. As we began the process of marrying image and sound we realized that there were many layers of symbolism and literalism that reached beyond the piece. While the song is about loss, it is even more about the journey of a beautiful, intelligent, caring and inspirational person that served as mother, wife, and friend to some involved in this project. A person with a rare approach to making the most of her time, no matter how limited it was.</p>
+                <p>The Red Looking Glass short film is a collaboration between Reflectivore and True Norse Films. As we began the process of marrying image and sound we realized that there were many layers of symbolism and literalism that reached beyond the piece. While the song is about loss, it is even more about the journey of a beautiful, intelligent, caring and inspirational person that served as mother, wife, and friend to many who worked on this project. A person with a rare approach to making the most of her time, no matter how limited it was.</p>
                 <p><a href="https://www.vimeo.com/148901039">Click Here to see the behind the scenes footage</a></p>
             </div>
         </div>
@@ -307,7 +304,7 @@ $headers = 'From: '.$email_from."\r\n".
     <div class="vertical-center">
         <div class="col-md-6 col-md-offset-3">
             <h1 style="color: #012340;">Who we are</h1>
-            <p style="color: #012340; font-weight: 600;">True Norse Films is a production company based out of Minneapolis, MN. True Norse focuses on creating narratives that explore the intricacies of human relationships. We also offer creative approaches to photography and brand storytelling, to enhance your visibility in the online market place. True Norse Films was formed by brothers Kjell and Per Kvanbeck in the winter of 2012.</p>
+            <p style="color: #012340; font-weight: 600;">True Norse Films is a production company based out of Minneapolis, MN. True Norse focuses on creating narratives that explore the intricacies of human relationships. We also offer creative approaches to photography and brand storytelling to enhance your visibility in the online market place. True Norse Films was formed by brothers Kjell and Per Kvanbeck in the winter of 2012.</p>
         </div>
     </div>
 </section>
@@ -429,7 +426,7 @@ $headers = 'From: '.$email_from."\r\n".
 
 				<div>
 					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:support@company.com">truenorsefilms@gmail.com</a></p>
+					<p><a href="mailto:truenorsefilms@gmail.com">truenorsefilms@gmail.com</a></p>
 				</div>
 
 			</div>
@@ -521,7 +518,7 @@ $headers = 'From: '.$email_from."\r\n".
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ){
 
-                $(this).animate({'opacity':'0', 'margin-top' : '7.5%'},0);
+                $(this).animate({'opacity':'0', 'margin-top' : '7.5%'},750);
 
             }
 
@@ -540,6 +537,39 @@ $headers = 'From: '.$email_from."\r\n".
     });
     </script>
     
+   <script>
+    var vid = document.getElementById("video1"),
+    videoButton = document.getElementById("video1");
+
+    window.ismuted = true;
+
+    videoButton.addEventListener("mouseover", function() {
+        /*if (ismuted === true) {
+          vid.muted = false;
+          ismuted = false;
+          } else {
+              vid.muted = true;
+              ismuted = true;
+          };*/
+        if (this.hasAttribute("controls")) {
+             this.setAttribute("controls","controls")   
+          } else {
+             this.setAttribute("controls","controls")   
+          }
+        });
+    </script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(window).load(function () {
+                setTimeout(function(){
+                    $('.se-pre-con').fadeOut('slow', function () {
+                    });
+                },2000);
+                $("body").removeClass("preload");
+            });  
+        });
+    </script>
+    
     
     <!-- Smooth Scroll -->
     <script type="text/javascript" src="js/smoothscroll.js"></script>
@@ -553,6 +583,6 @@ $headers = 'From: '.$email_from."\r\n".
 
 
 </body>
-    <div class="se-pre-con"><h2 id="load-msg">Loading, thank you for your patience.</h2></div>
+<div class="se-pre-con"><h2 id="load-msg">Loading, thank you for your patience.</h2></div>
 
 </html>

@@ -1,6 +1,16 @@
 /* Globals */
 
+body {
+    font-size: 12pt;
+}
 
+.preload {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+    display: none;
+}
 
 section {
   width: 100%;
@@ -19,18 +29,21 @@ h1 {
 	font-weight: 900;
 	font-style: normal;
     font-size: 42pt;
+    color: #012340;
 }
 
 h2 {
     font-family: 'Ostrich Sans';
 	font-weight: 900;
 	font-style: normal;
+    color: #012340;
 }
 
 h3 {
     font-family: 'Ostrich Sans';
 	font-weight: 900;
 	font-style: normal;
+    color: #012340;
 }
 
 h4 {
@@ -106,6 +119,7 @@ ul {
 }
 
 @media only screen and (min-width: 600px) {
+
     .navbar-brand {
         position: relative;
         left: -5px;
@@ -213,7 +227,7 @@ ul {
 
 #video1 {
     position: relative;
-    top: -140px;
+    top: -120px;
     min-height: 360px;
     margin-bottom: -120px;
 }
@@ -273,11 +287,10 @@ ul {
 /* Gallery style */
 
 div figcaption {
-	padding: 2em;
+    padding: 5px;
 	color: #f2f2f2;
     text-shadow: 2px 2px 5px #333;
 	text-transform: uppercase;
-	font-size: 1.25em;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
@@ -285,10 +298,9 @@ div figcaption {
 div figcaption,
 div figcaption > a {
 	position: absolute;
-	top: 0;
+	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
 }
 
 figcaption > a {
@@ -299,11 +311,6 @@ figcaption > a {
 	opacity: 0;
 }
 
-figcaption h2 {
-	font-weight: 800;
-    font-size: 24pt;
-}
-
 figcaption h2,
 figcaption p {
 	margin: 0;
@@ -311,25 +318,66 @@ figcaption p {
 
 figcaption p {
 	letter-spacing: 1px;
-	font-size: 100%;
     font-weight: 400;
     color: #f2f2f2;
 }
 
 
 #myContent {
-	-moz-column-count: 2;
-	-moz-column-gap: 0px;
-	-webkit-column-count: 2;
-	-webkit-column-gap: 0px;
-	column-count: 2;
-    column-gap: 0px;
+	-moz-column-count: 3;
+	-moz-column-gap: 10px;
+	-webkit-column-count: 3;
+	-webkit-column-gap: 10px;
+	column-count: 3;
+    column-gap: 10px;
 }
 
 div.effect-moses {
     position: relative;
     overflow: hidden;
     margin-top: 0;
+}
+
+#myContent li {
+    height: 100%;
+    box-shadow: 1px 5px 7.8px 0.2px rgba(0, 0, 0, 0.6);
+    margin-bottom: 10px;
+    break-inside: avoid-column;
+    -webkit-column-break-inside: avoid;
+    display: inline-block;
+}
+
+#myContent li .gallery-subcaption {
+    background: #fff !important;
+    padding: 5px 10px 50px 15px;
+}
+
+.gallery-subcaption h2 {
+    margin-top: 7.5px;
+}
+
+.gallery-subcaption p {
+    display: block;
+    font-size: 80%;;
+}
+
+.gallery-subcaption .icon {
+    float: left;
+    background: none;
+    color: #012340;
+}
+
+.gallery-subcaption a{
+    border-radius: 3px;
+    padding: 5px 10px;
+    float: right;
+    margin-top: 7.5px;
+    display: block;
+    position: inherit;
+    background-color: #012340;
+    color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
 }
 
 #myContent li:nth-of-type(1) {
@@ -362,72 +410,80 @@ div.effect-moses {
 	background: linear-gradient(115deg, #E1D1B7 0%,#F6E8CB 20%,#B5E1C8 40%,#85B9A3 60%,#322A1D 100%);
 }
 
-div.effect-moses h2,
-div.effect-moses p {
-	padding: 5px;
-	width: 100%;
-	height: 50%;
-	border: none;
+@media only screen and (min-width: 999px){
+
+    div.effect-moses p {
+        display: inline-block;
+        font-size: 65%;
+        border: 1px #fff solid;
+        padding: 5px;
+        text-align: left;
+        opacity: 1;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+    }
+
+    div.effect-moses:hover p {
+        opacity: .65;
+    }
+
+    #myContent img{
+        display: block;
+        width: 100%;
+        opacity: 0.35;
+        -webkit-transition: opacity 0.35s;
+        transition: opacity 0.35s;
+    }
+    
+    #myContent div.effect-moses:hover img {
+        opacity: 0.9;
+    }
 }
 
-div.effect-moses h2 {
-    font-family: 'Open sans', sans-serif;
-    font-weight: 400;
-	padding: 5px;
-	width: 100%;
-    opacity: 0;
-    font-size: 36pt;
-	text-align: center;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(0,25%,0);
-	transform: translate3d(0,25%,0);
-}
+@media only screen and (max-width: 998px){
+   
+    div.effect-moses p {
+         display: inline-block;
+        font-size: 6pt;
+        border: 1px #fff solid;
+        padding: 5px;
+        text-align: left;
+        opacity: 1;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+    }
 
-div.effect-moses p {
-	float: right;
-	padding: 5px;
-	text-align: center;
-	opacity: 0;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(0,25%,0);
-	transform: translate3d(0,25%,0);
-}
 
-div.effect-moses:hover h2 {
-    -webkit-transform: translate3d(0,50%,0);
-	transform: translate3d(0,50%,0);
-    opacity: 1;
-}
+    div.effect-moses:hover p {
+        opacity: .65;
+    }
 
-div.effect-moses:hover p {
-    -webkit-transform: translate3d(0,50%,0);
-	transform: translate3d(0,50%,0);
-	opacity: 1;
-}
+    #myContent img{
+        display: block;
+        width: 100%;
+        opacity: 0.85;
+        -webkit-transition: opacity 0.35s;
+        transition: opacity 0.35s;
+    }
+    
+    #myContent li {
+        min-height: 200px;
+    }
 
-#myContent img{
-	display: block;
-	width: 100%;
-    opacity: 0.95;
-	-webkit-transition: opacity 0.35s;
-	transition: opacity 0.35s;
-}
-
-#myContent div.effect-moses:hover img {
-	opacity: 0.3;
+    #myContent div.effect-moses:hover img {
+        opacity: 0.95;
+    }
 }
 
 @media only screen and (max-width : 1199px),
 only screen and (max-device-width : 1199px){
 	#myContent {
 		-moz-column-count: 2;
-		-moz-column-gap: 0px;
+		-moz-column-gap: 10px;
 		-webkit-column-count: 2;
-		-webkit-column-gap: 0px;
+		-webkit-column-gap: 10px;
 		column-count: 2;
-		column-gap: 0px;
+		column-gap: 10px;
 		width: 100%;
 	}
 }
@@ -437,11 +493,11 @@ only screen and (max-device-width : 1199px){
 only screen and (max-device-width : 999px){
 	#myContent {
 		-moz-column-count: 1;
-		-moz-column-gap: 0px;
+		-moz-column-gap: 10px;
 		-webkit-column-count: 1;
-		-webkit-column-gap: 0px;
+		-webkit-column-gap: 10px;
 		column-count: 1;
-		column-gap: 0px;
+		column-gap: 10px;
 		width: 100%;
 	}
 
@@ -768,6 +824,85 @@ fieldset {
 	margin-bottom: 5px;
 }
 
+/* Project pages */
+
+#project .row {
+    margin: 20px 20px;
+}
+
+#project .container {
+    background-color: #f2f2f2;
+    box-shadow: 1px 0 7.8px 0.2px rgba(0, 0, 0, 0.8);
+    position: relative;
+    padding: 20px -20px 40px -20px;
+    margin: 80vh auto 0 auto;
+}
+
+#project footer {
+    margin-top: 100px;
+}
+
+video#bgvid { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover; 
+}
+
+video#bgvid {
+    transition: 1s opacity;
+}
+.stopfade { opacity: .5; }
+
+#vidbutton {
+    background: rgba(127,127,127,0.6);
+    color: #f2f2f2;
+    border: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20pt;
+    font-weight: 400;
+    position: absolute;
+    padding: 10px;
+    left: 44%;
+    bottom: 50%;
+}
+
+.fullscreen {
+    z-index: 9998 !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover; 
+}
+
+video { display: block; }
+
+@media screen and (max-device-width: 800px) {
+    html {
+         
+    }
+    #bgvid {
+        display: none;
+    }
+}
+
 /* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 880px) {
@@ -797,14 +932,18 @@ fieldset {
     
     .navbar {
         height: auto;
+        width: 90%;
+        position: fixed;
+        z-index: 9999;
     }
     
     .navbar-brand {
-        opacity: 0;
     }
     
     #logo {
-        display: none;
+        margin-top: -10px;
+        height: 40px;
+        width: auto;
     }
     
     .icon-bar {
