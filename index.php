@@ -636,16 +636,8 @@ $headers = 'From: '.$email_from."\r\n".
           }
         });
     </script>
-    <script>
-        jQuery(document).ready(function ($) {
-            $(window).load(function () {
-                $('.se-pre-con').fadeOut('slow', function () {
-                });
-                $("body").removeClass("preload");
-            });  
-        });
-    </script>
     
+    <script src="/js/pagetransition.js"></script>    
     
     <!-- Smooth Scroll -->
     <script type="text/javascript" src="js/smoothscroll.js"></script>
