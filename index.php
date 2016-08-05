@@ -164,7 +164,7 @@ $headers = 'From: '.$email_from."\r\n".
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
-    <script src="js/sss.js"></script>
+    <script src="/js/sss.js"></script>
     <script>
         jQuery(function($) {
         $('.slider').sss({
@@ -192,7 +192,7 @@ $headers = 'From: '.$email_from."\r\n".
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="http://truenorsefilms.com">
-                <img id="logo" src="img/True-Norse-black.png"/>
+                <img id="logo" src="/img/True-Norse-black.png"/>
             </a>
           </div>
           <div id="navbar2" class="navbar-collapse collapse">
@@ -640,7 +640,7 @@ $headers = 'From: '.$email_from."\r\n".
     <script src="/js/pagetransition.js"></script>    
     
     <!-- Smooth Scroll -->
-    <script type="text/javascript" src="js/smoothscroll.js"></script>
+    <script type="text/javascript" src="/js/smoothscroll.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

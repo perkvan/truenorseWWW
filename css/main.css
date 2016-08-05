@@ -666,14 +666,13 @@ div.effect-moses {
         transition: opacity 0.35s, transform 0.35s;
     }
 
-
     div.effect-moses:hover p {
         opacity: .65;
     }
 
-    div.effect-moses>img {
+    div.effect-moses img {
         display: block;
-        width: 100%;
+        max-width: 100%;
         opacity: 0.85;
         -webkit-transition: opacity 0.35s;
         transition: opacity 0.35s;
