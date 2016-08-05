@@ -197,10 +197,10 @@ $headers = 'From: '.$email_from."\r\n".
           </div>
           <div id="navbar2" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="/test/project-template.html">Example Proj.</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li class="active"><a href="/index.php">Home</a></li>
+              <li><a href="/project-template.html">Example Proj.</a></li>
+              <li><a href="/projects.html">Projects</a></li>
+              <li><a href="#footer">Contact Us</a></li>
               <li>
                  <div id="soc-header">
                       <a href="https://www.facebook.com/True-Norse-Films-447289181993942/"><i class="fa fa-facebook
@@ -221,16 +221,16 @@ $headers = 'From: '.$email_from."\r\n".
         <div class="col-sm-12">
             <div class="slider">
             <div>
-                <img class="col-md-6" src="/test/img/diagram-1-1.png" />
-                <img class="col-md-6" src="/test/img/diagram-1-2.png" />
+                <img class="col-md-6" src="/img/diagram-1-1.png" />
+                <img class="col-md-6" src="/img/diagram-1-2.png" />
             </div>
             <div>
-                <img class="col-md-6" src="/test/img/diagram-2-1.png" />
-                <img class="col-md-6" src="/test/img/diagram-2-2.png" />
+                <img class="col-md-6" src="/img/diagram-2-1.png" />
+                <img class="col-md-6" src="/img/diagram-2-2.png" />
             </div>
                 <div>
-                <img class="col-md-6" src="/test/img/diagram-3-1.png" />
-                <img class="col-md-6" src="/test/img/diagram-3-2.png" />
+                <img class="col-md-6" src="/img/diagram-3-1.png" />
+                <img class="col-md-6" src="/img/diagram-3-2.png" />
             </div>
             </div>    
         </div>
@@ -246,9 +246,9 @@ $headers = 'From: '.$email_from."\r\n".
           <div class="col-sm-6">
               <video playsinline muted autoplay loop poster id="video1" src="https://player.vimeo.com/external/63204198.hd.mp4?s=6e7aa97f997713aa9a42a29387b8f8d352549f36&profile_id=113" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></video>
               <div class="row">
-                  <img class="col-xs-4" src="/test/img/laurel-runner-up.png"/>
-                  <img class="col-xs-4" src="/test/img/laurel-best-mn.png"/>
-                  <img class="col-xs-4" src="/test/img/laurel-canadian-script.png"/>
+                  <img class="col-xs-4" src="/img/laurel-runner-up.png"/>
+                  <img class="col-xs-4" src="/img/laurel-best-mn.png"/>
+                  <img class="col-xs-4" src="/img/laurel-canadian-script.png"/>
               </div>
           </div>
           <div class="col-sm-6">
@@ -300,11 +300,69 @@ $headers = 'From: '.$email_from."\r\n".
         </div>
       </div>
 </section>
-<section id="bg-2">
-    <div class="vertical-center">
-        <div class="col-md-6 col-md-offset-3">
-            <h1 style="color: #012340;">Who we are</h1>
-            <p style="color: #012340; font-weight: 600;">True Norse Films is a production company based out of Minneapolis, MN. True Norse focuses on creating narratives that explore the intricacies of human relationships. We also offer creative approaches to photography and brand storytelling to enhance your visibility in the online market place. True Norse Films was formed by brothers Kjell and Per Kvanbeck in the winter of 2012.</p>
+<section id="services">
+    <div class="container">
+        <div class="vertical-center">
+            <div class="row">
+            <h1 style="text-align: center;margin-bottom: 5%; color: #f2f2f2; 
+    text-shadow: 2px 2px 5px #333;">Services</h1>
+            <div class="col-lg-3 col-sm-6">
+                <div class="serviceBox">
+                    <div class="service-icon">
+                        <i class="fa fa-video-camera"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3> Film </h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum porta blandit. Fusce auctor risus turpis, et sodales sapien interdum at. Aenean sodales sed nibh ac tincidunt. Maecenas. </p>
+                    </div>
+                    <div class="read">
+                        <a href="#">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="serviceBox">
+                    <div class="service-icon">
+                        <i class="fa fa-camera"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3> Photography </h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum porta blandit. Fusce auctor risus turpis, et sodales sapien interdum at. Aenean sodales sed nibh ac tincidunt. Maecenas. </p>
+                    </div>
+                    <div class="read">
+                        <a href="#">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="serviceBox">
+                    <div class="service-icon">
+                        <i class="fa fa-pencil"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3> Design </h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum porta blandit. Fusce auctor risus turpis, et sodales sapien interdum at. Aenean sodales sed nibh ac tincidunt. Maecenas. </p>
+                    </div>
+                    <div class="read">
+                        <a href="#">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="serviceBox">
+                    <div class="service-icon">
+                        <i class="fa fa-globe"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3> Web </h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum porta blandit. Fusce auctor risus turpis, et sodales sapien interdum at. Aenean sodales sed nibh ac tincidunt. Maecenas. </p>
+                    </div>
+                    <div class="read">
+                        <a href="#">More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
 </section>
@@ -312,55 +370,73 @@ $headers = 'From: '.$email_from."\r\n".
     <div class="container">
         <h1 style="text-align: center;">More Work</h1>
         <ul id="myContent"> 			
-            <li><div class="effect-moses"><img src="/test/img/proj/raidho-2.png" alt="" />
+            <li><div class="effect-moses"><a href="/project-template.html"><img src="/img/proj/raidho-2.png" alt="" /></a>
                 <figcaption>
-							<h2>Raidho</h2>
-							<p>5 min | Short Film</p>
-							<a href="https://player.vimeo.com/video/44048804?color=42dac3" target="_blank">View more</a>
+							<p>Direction</p>
+							<p>Writing</p>
+							<p>Cinematography</p>
 						</figcaption>
                 </div>
-            </li>
-            <li><div class="effect-moses"><img src="/test/img/proj/deeply-2.png" alt="" />
-                <figcaption>
-							<h2>Deeply</h2>
-							<p>3 min | Short Film</p>
-							<a href="https://player.vimeo.com/video/102868220?" target="_blank">View more</a>
-						</figcaption>
+                <div class="gallery-subcaption">
+                    <h2>Raidho</h2>
+                    <p>Additional text could go here to make these objects more acccessible immediately. Perhaps a quick blurb on why they should click.</p>
+                    <a class="icon" href="#"><i class="fa fa-vimeo"></i></a>
+                    <a class="icon" href="#"><i class="fa fa-facebook"></i></a>
+                    <a class="icon" href="#"><i class="fa fa-flickr"></i></a>
+                    <a href="/project-template.html">read more</a>
                 </div>
             </li>
-            <li><div class="effect-moses"><img src="/test/img/proj/face-v2.jpg" alt="" />
+            <li><div class="effect-moses"><a href="/project-template.html"><img src="/img/proj/deeply-2.png" alt="" /></a>
                 <figcaption>
-							<h2>Air Between Us</h2>
-							<p>9 min | Short Film</p>
-							<a href="https://player.vimeo.com/video/121327040" target="_blank">View more</a>
+							<p>Direction</p>
+							<p>Writing</p>
+							<p>Cinematography</p>
 						</figcaption>
                 </div>
-            </li>
-            <li><div class="effect-moses"><img src="/test/img/proj/fra-asken.png" alt="" />
-                <figcaption>
-							<h2>Fra Asken</h2>
-							<p>11 min | Short Film</p>
-							<a href="https://player.vimeo.com/video/137496371" target="_blank">View more</a>
-						</figcaption>
+                <div class="gallery-subcaption">
+                    <h2>Deeply</h2>
+                    <p>Additional text could go here to make these objects more acccessible immediately. Perhaps a quick blurb on why they should click.</p>
+                    <a class="icon" href="#"><i class="fa fa-vimeo"></i></a>
+                    <a class="icon" href="#"><i class="fa fa-facebook"></i></a>
+                    <a class="icon" href="#"><i class="fa fa-flickr"></i></a>
+                    <a href="/project-template.html">read more</a>
                 </div>
             </li>
-            <li><div class="effect-moses"><img src="/test/img/proj/2015-beard-cont-v2.jpg" alt="" />
+            <li><div class="effect-moses"><a href="/project-template.html"><img src="/img/proj/face-v2.jpg" alt="" /></a>
                 <figcaption>
-							<h2>MBMC Contest</h2>
-							<p>3 min | Event</p>
-							<a href="https://player.vimeo.com/video/130943487" target="_blank">View more</a>
+							<p>Direction</p>
+							<p>Writing</p>
+							<p>Graphic Design</p>
 						</figcaption>
                 </div>
+                <div class="gallery-subcaption">
+                    <h2>Air Between Us</h2>
+                    <p>Additional text could go here to make these objects more acccessible immediately. This is all filler.</p>
+                    <a class="icon" href="#"><i class="fa fa-vimeo"></i></a>
+                    <a class="icon" href="#"><i class="fa fa-facebook"></i></a>
+                    <a class="icon" href="#"><i class="fa fa-flickr"></i></a>
+                    <a href="/project-template.html">read more</a>
+                </div>
             </li>
-            <li><div class="effect-moses"><img src="/test/img/proj/living-narrative.jpg" alt="" />
+            <li><div class="effect-moses"><a href="/project-template.html"><img src="/img/proj/fra-asken.png" alt="" /></a>
                 <figcaption>
-							<h2>Living Narrative</h2>
-							<p>1 min | Commercial</p>
-							<a href="https://player.vimeo.com/video/138341234" target="_blank">View more</a>
+							<p>Direction</p>
+							<p>Writing</p>
+                            <p>Cinematography</p>
+                            <p>Editing</p>
 						</figcaption>
+                </div>
+                <div class="gallery-subcaption">
+                    <h2>Fra Asken</h2>
+                    <p>Additional text could go here to make these objects more acccessible immediately. Perhaps a quick blurb on why they should click.</p>
+                    <a class="icon" href="#"><i class="fa fa-vimeo"></i></a>
+                    <a class="icon" href="#"><i class="fa fa-facebook"></i></a>
+                    <a class="icon" href="#"><i class="fa fa-flickr"></i></a>
+                    <a href="/project-template.html">read more</a>
                 </div>
             </li>
         </ul> 
+        <a style="text-decoration: none;" href="/projects.html"><button>See more projects</button></a>
     </div>
 </section>
     
@@ -399,14 +475,16 @@ $headers = 'From: '.$email_from."\r\n".
 
 			<div class="footer-left">
                 
-                <img style="height: 100px;width: auto;" src="/test/img/True-Norse-black.png" />
+                <img style="height: 100px;width: auto;" src="/img/True-Norse-black.png" />
 
 				<p class="footer-links">
 					<a href="#">Home</a>
 					·
-					<a href="#portfolio">Portfolio</a>
+					<a href="/projects.html">Projects</a>
 					·
 					<a href="#bg-3">Contact</a>
+					·
+                    <a href="/about-us.html">About us</a>
 				</p>
 
 				<p class="footer-company-name">True Norse Films&copy; 2015</p>
@@ -561,10 +639,8 @@ $headers = 'From: '.$email_from."\r\n".
     <script>
         jQuery(document).ready(function ($) {
             $(window).load(function () {
-                setTimeout(function(){
-                    $('.se-pre-con').fadeOut('slow', function () {
-                    });
-                },2000);
+                $('.se-pre-con').fadeOut('slow', function () {
+                });
                 $("body").removeClass("preload");
             });  
         });

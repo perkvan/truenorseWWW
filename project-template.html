@@ -48,10 +48,10 @@
     <![endif]-->
 </head>
 
-<body>
+<body class="preload">
 <section class="project-header">
 <div class="container">
-    <div class="container example2">
+    <div class="container">
       <nav class="navbar">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -62,22 +62,21 @@
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="http://truenorsefilms.com">
-                <img id="logo" src="img/True-Norse-black.png"/>
+                <img id="logo" src="/img/True-Norse-black.png"/>
             </a>
           </div>
           <div id="navbar2" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="active"><a href="/index.php">Home</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="/test/project-template.html">Example Proj.</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="/project-template.html">Example Proj.</a></li>
+              <li><a href="/projects.html">Projects</a></li>
+              <li><a href="#footer">Contact Us</a></li>
               <li>
                  <div id="soc-header">
-                      <a href="https://www.facebook.com/True-Norse-Films-447289181993942/"><i class="fa fa-facebook
-                          "></i></a>
-                      <a href="https://www.instagram.com/truenorsefilms/"><i class="fa fa-instagram"></i></a>
-                      <a href="https://twitter.com/kkvanbeck"><i class="fa fa-twitter"></i></a>
-                      <a href="https://vimeo.com/user2810479"><i class="fa fa-vimeo"></i></a>
+                      <a href="#"><img src="img/facebook.png"/></a>
+                      <a href="#"><img src="img/Instagram.png"/></a>
+                      <a href="#"><img src="img/twitter.png"/></a>
+                      <a href="#"><img src="img/Vimeo.png"/></a>
                   </div>
               </li>
             </ul>
@@ -89,11 +88,11 @@
     </div>
 </div>
 </section>
-<section>
-    <video playsinline autoplay muted loop poster="/img/proj/bain-garage.jpg" id="bgvid">
+<section class="header-video">
+    <video style="background-image: url(/img/proj/bain-garage.jpg); background-position: 85% 50%;" playsinline loop poster="/img/1px-transparent.png" id="bgvid">
         <source src="https://player.vimeo.com/external/63204198.hd.mp4?s=6e7aa97f997713aa9a42a29387b8f8d352549f36&profile_id=113" type="video/mp4">
     </video>
-    <button id="vidbutton">click here for audio</button>
+    <i id="vidbutton" class="fa fa-play-circle"></i>
 </section>
 <div class="bottom-center showme">
             <h4 style="color: #f2f2f2; font-weight: 100; margin-top: -50px; font-style: oblique; font-size: 10pt;">scroll to read about this film</h4>
@@ -186,14 +185,14 @@
                     malis offendit familiaritatem a aliquip efflorescere se offendit.</p>
             </div>
             <div class="col-sm-6">
-                <img style="width:100%;" src="img/proj/couch-1.jpeg"/>
+                <img style="width:100%;" src="/img/proj/couch-1.jpeg"/>
             </div>
         </div>
     <footer class="footer-distributed">
 
 			<div class="footer-left">
                 
-                <img style="height: 100px;width: auto;" src="/test/img/True-Norse-black.png" />
+                <img style="height: 100px;width: auto;" src="/img/True-Norse-black.png" />
 
 				<p class="footer-links">
 					<a href="#">Home</a>
@@ -337,42 +336,38 @@
     var vid = document.getElementById("bgvid"),
     videoButton = document.getElementById("vidbutton");
 
-    window.ismuted = true;
+    window.ispaused = true;
     var expanded = false;
     if (!isMobile) {
         $("#vidbutton").on("click keyup", function(e) {
             if (e.type == "click" || e.keyCode == 27 || e.keyCode == 8) {
-            if (ismuted === true) {
-              vid.muted = false;
-              ismuted = false;
-              } else {
-                  vid.muted = true;
-                  ismuted = true;
-              };
+            vid.paused ? vid.play() : vid.pause();
             if (!expanded){
-                  $(this).animate({'left' : '0px', 'bottom' : '0px', 'font-size' : '10pt'}, {duration : 400}).css("z-index", "9999");
+                  $(this).animate({'left' : '15px', 'bottom' : '15px', 'font-size' : '20pt'}, {duration : 400}).css("z-index", "9999");
                   expanded = true;
               }
               else
               {
-                 $(this).animate({'left' : '43%', 'bottom' : '50%', 'font-size' : '20pt'}, {duration: 400}).css("z-index", "0");
+                 $(this).animate({'left' : '47.5%', 'bottom' : '50%', 'font-size' : '80pt'}, {duration: 400}).css("z-index", "0");
                   expanded = false;
               };
             $("#bgvid").toggleClass("fullscreen");
-            if ($(this).text() == "click here for audio") 
-              { 
-                 $(this).text("click here to mute"); 
-              } 
-              else 
-              { 
-                 $(this).text("click here for audio"); 
-              };
+            $("#vidbutton").toggleClass("fa-pause-circle");
             }
         });
     } else {
             $("#vidbutton").hide();
 
     }
+    </script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(window).load(function () {
+                $('.se-pre-con').fadeOut('slow', function () {
+                });
+                $("body").removeClass("preload");
+            });  
+        });
     </script>
     
     
@@ -388,5 +383,6 @@
 
 
 </body>
+<div class="se-pre-con"><h2 id="load-msg">Loading, thank you for your patience.</h2></div>
 
 </html>

@@ -79,7 +79,7 @@ ul {
 	width: 100%;
 	height: 100%;
 	z-index: 9999;
-	background: url(/test/img/Preloader_7.gif) center no-repeat #fff;
+	background: url(/img/Preloader_7.gif) center no-repeat #fff;
 }
 
 #load-msg {
@@ -116,6 +116,7 @@ ul {
     background-color: #f2f2f2;
     box-shadow: 3px 0 7.8px 0.2px rgba(0, 0, 0, 0.8);
     border-radius: 0px;
+    z-index: 100;
 }
 
 @media only screen and (min-width: 600px) {
@@ -187,7 +188,7 @@ ul {
 
 .intro {
     height: 100vh;
-    background-image: url(/test/img/DSC00498-v2.jpg);
+    background-image: url(/img/DSC00498-v2.jpg);
     background-size: cover;
     margin: 0;
 }
@@ -250,16 +251,6 @@ ul {
     min-height: 360px;
 }
 
-#bg-2 {
-    height: 100vh;
-    background-image: url(/test/img/proj/large.jpg);
-    background-size: cover;
-    background-position: center;
-    margin: 0;
-    display: table;
-    margin-top: -5vh;
-}
-
 .vertical-center {
     display: table-cell;
     vertical-align: middle;
@@ -271,6 +262,7 @@ ul {
     position: relative;
     padding: 20px 20px 40px 20px;
     top: -5vh;
+    bottom: 0;
 }
 
 .ratio{
@@ -284,7 +276,191 @@ ul {
     background-size: cover;  
 }
 
+#main-projects {
+}
+
+#main-projects img {
+    max-height: 500px;
+    overflow: hidden;
+    margin-left: -25%;
+}
+
+#gallery button {
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin: 25px auto 0 auto;
+    background-color: rgba(0,0,0,0);
+    color: #012340;
+    text-align: center;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    -webkit-transition: background-color 150ms linear;
+    -moz-transition: background-color 150ms linear;
+    -o-transition: background-color 150ms linear;
+    -ms-transition: background-color 150ms linear;
+    transition: background-color 150ms linear;
+}
+
+#gallery button:hover {
+    background-color: #012340;
+    color: #f2f2f2;
+    -webkit-transition: background-color 150ms linear;
+    -moz-transition: background-color 150ms linear;
+    -o-transition: background-color 150ms linear;
+    -ms-transition: background-color 150ms linear;
+    transition: background-color 150ms linear;
+}
+
+/* Services Section */
+
+#services {
+    height: 100vh;
+    background-image: url(/img/proj/large.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    display: table;
+    margin-top: -5vh;
+}
+
+#services .container {
+    height: 100vh;
+    display: table;
+}
+
+.serviceBox {
+    background: #f2f2f2;
+    text-align: center;
+    padding: 0 0 25px;
+    box-shadow: 1px 0 7.8px 0.2px rgba(0, 0, 0, 0.8);
+    border-top: 10px solid #f2f2f2;
+    margin-top: 55px;
+}
+.serviceBox .service-icon {
+    width: 130px;
+    height: 130px;
+    line-height: 154px;
+    border-radius: 50%;
+    background: #f2f2f2;
+    box-shadow: 1px 0 7.8px 0.2px rgba(0, 0, 0, 0.8);
+    margin: -77px auto 0;
+}
+.serviceBox .service-icon i{
+    color: #012340;
+    font-size: 55px;
+}
+.serviceBox .service-content{
+    padding: 0 25px;
+}
+.serviceBox .service-content h3{
+    color: #012340;
+    font: bold 24px/40px 'arial';
+    text-transform: uppercase;
+    margin: 30px 0 10px;
+}
+.serviceBox .service-content p{
+    text-align: left;
+    font: lighter 13px/20px "verdana";
+    color: #A2A2A2;
+    margin: 0 0 20px;
+}
+.serviceBox .read{
+    padding: 30px 0;
+}
+.serviceBox .read a{
+    border: 1px solid #012340;
+    padding: 9px 25px;
+    font: 600 14px/18px "arial";
+    color: #012340;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+.serviceBox .read a:hover{
+    background: #012340;
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
 /* Gallery style */
+
+#projects-gallery .container{
+    background-color: #f2f2f2;
+    box-shadow: 1px 0 7.8px 0.2px rgba(0, 0, 0, 0.8);
+    position: relative;
+    padding: 20px 20px 40px 20px;
+    top: 75vh;
+    z-index: 0;
+}
+
+#projects-header {
+    height: 100vh;
+    background-image: url(/img/bg-1.jpg);
+    background-position: 50% 25%;
+    background-size: cover;
+    margin: 0;
+    position: absolute;
+}
+
+#header h1 {
+    color: #f2f2f2;
+    font-size: 80pt;
+    text-shadow: 2px 2px 5px #333;
+}
+
+#header h3 {
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 400;
+    color: #f2f2f2;
+    font-size: 20pt;
+    text-shadow: 2px 2px 5px #333;
+}
+
+#projects-bg-2 {
+    height: 100vh;
+    padding-bottom: 10vh;
+    background-image: url(/img/proj/at-sink.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 75%;
+    margin-top: -24vh;
+    display: table;
+    padding-bottom: 30vh;
+    text-align: center;
+}
+
+#projects-bg-2 button {
+    background-color: rgba(0,0,0,0);
+    padding: 10px 20px;
+    margin-right: 20px;
+    color: #f2f2f2;
+    font-size: 100%;
+    border: 1px #f2f2f2 solid;
+    border-radius: 3px;
+    font-size: 14pt;
+    -webkit-transition: background-color 150ms ease-in;
+    -moz-transition: background-color 150ms ease-in;
+    -o-transition: background-color 150ms ease-in;
+    -ms-transition: background-color 150ms ease-in;
+    transition: background-color 150ms ease-in;
+}
+
+#projects-bg-2 button:hover {
+    background-color: #f2f2f2;
+    color: #012340;
+    border: none;
+    -webkit-transition: background-color 150ms ease-in;
+    -moz-transition: background-color 150ms ease-in;
+    -o-transition: background-color 150ms ease-in;
+    -ms-transition: background-color 150ms ease-in;
+    transition: background-color 150ms ease-in;
+}
+
+#projects-bg-2 button i {
+    font-size: 12pt;
+    padding-right: 10px;
+}
 
 div figcaption {
     padding: 5px;
@@ -322,8 +498,16 @@ figcaption p {
     color: #f2f2f2;
 }
 
+#gallery #myContent {
+	-moz-column-count: 2;
+	-moz-column-gap: 10px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 10px;
+	column-count: 2;
+    column-gap: 10px;
+}
 
-#myContent {
+#projects-gallery #myContent {
 	-moz-column-count: 3;
 	-moz-column-gap: 10px;
 	-webkit-column-count: 3;
@@ -374,10 +558,26 @@ div.effect-moses {
     margin-top: 7.5px;
     display: block;
     position: inherit;
-    background-color: #012340;
-    color: #f2f2f2;
+    background-color: rgba(0,0,0,0);
+    color: #012340;
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
+    -webkit-transition: background-color 150ms linear;
+    -moz-transition: background-color 150ms linear;
+    -o-transition: background-color 150ms linear;
+    -ms-transition: background-color 150ms linear;
+    transition: background-color 150ms linear;
+}
+
+.gallery-subcaption a:hover {
+    background-color: #012340;
+    color: #f2f2f2;
+    border: none;
+    -webkit-transition: background-color 150ms linear;
+    -moz-transition: background-color 150ms linear;
+    -o-transition: background-color 150ms linear;
+    -ms-transition: background-color 150ms linear;
+    transition: background-color 150ms linear;
 }
 
 #myContent li:nth-of-type(1) {
@@ -426,10 +626,23 @@ div.effect-moses {
     div.effect-moses:hover p {
         opacity: .65;
     }
-
-    #myContent img{
+    
+    #projects-gallery div.effect-moses {
+        height: 200px;
+    }
+    
+    div.effect-moses {
+        position: relative;
         display: block;
+        overflow: hidden;
+        height: 300px;
+    }
+    
+    div.effect-moses img {
+        position: absolute;
         width: 100%;
+        min-height: 100%;
+        margin: 0 auto;
         opacity: 0.35;
         -webkit-transition: opacity 0.35s;
         transition: opacity 0.35s;
@@ -458,7 +671,7 @@ div.effect-moses {
         opacity: .65;
     }
 
-    #myContent img{
+    div.effect-moses>img {
         display: block;
         width: 100%;
         opacity: 0.85;
@@ -477,57 +690,88 @@ div.effect-moses {
 
 @media only screen and (max-width : 1199px),
 only screen and (max-device-width : 1199px){
-	#myContent {
-		-moz-column-count: 2;
-		-moz-column-gap: 10px;
-		-webkit-column-count: 2;
-		-webkit-column-gap: 10px;
-		column-count: 2;
-		column-gap: 10px;
-		width: 100%;
-	}
+	#gallery #myContent {
+        -moz-column-count: 2;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 10px;
+        column-count: 2;
+        column-gap: 10px;
+    }
+
+    #projects-gallery #myContent {
+        -moz-column-count: 3;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 3;
+        -webkit-column-gap: 10px;
+        column-count: 3;
+        column-gap: 10px;
+    }
 }
 
 
 @media only screen and (max-width : 999px),
 only screen and (max-device-width : 999px){
-	#myContent {
-		-moz-column-count: 1;
-		-moz-column-gap: 10px;
-		-webkit-column-count: 1;
-		-webkit-column-gap: 10px;
-		column-count: 1;
-		column-gap: 10px;
-		width: 100%;
-	}
+	#gallery #myContent {
+        -moz-column-count: 1;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 1;
+        -webkit-column-gap: 10px;
+        column-count: 1;
+        column-gap: 10px;
+    }
+
+    #projects-gallery #myContent {
+        -moz-column-count: 1;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 1;
+        -webkit-column-gap: 10px;
+        column-count: 1;
+        column-gap: 10px;
+    }
 
 }
 
 @media only screen and (max-width : 799px),
 only screen and (max-device-width : 799px){
-	#myContent {
-		-moz-column-count: 1;
-		-moz-column-gap: 0px;
-		-webkit-column-count: 1;
-		-webkit-column-gap: 0px;
-		column-count: 1;
-		column-gap: 0px;
-		width: 100%;
-	}
+	#gallery #myContent {
+        -moz-column-count: 1;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 1;
+        -webkit-column-gap: 10px;
+        column-count: 1;
+        column-gap: 10px;
+    }
+
+    #projects-gallery #myContent {
+        -moz-column-count: 1;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 1;
+        -webkit-column-gap: 10px;
+        column-count: 1;
+        column-gap: 10px;
+    }
 }
 
 @media only screen and (max-width : 599px),
 only screen and (max-device-width : 599px){
-	#myContent {
-		-moz-column-count: 1;
-		-moz-column-gap: 0px;
-		-webkit-column-count: 1;
-		-webkit-column-gap: 0px;
-		column-count: 1;
-		column-gap: 0px;
-        width: 100%;
-	}
-	
+	#gallery #myContent {
+        -moz-column-count: 1;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 1;
+        -webkit-column-gap: 10px;
+        column-count: 1;
+        column-gap: 10px;
+    }
+
+    #projects-gallery #myContent {
+        -moz-column-count: 1;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 1;
+        -webkit-column-gap: 10px;
+        column-count: 1;
+        column-gap: 10px;
+    }
 }
 
 /* Contact Section */
@@ -535,7 +779,7 @@ only screen and (max-device-width : 599px){
 #bg-3 {
     height: 100vh;
     padding-bottom: 10vh;
-    background-image: url(/test/img/bg-3-2.jpg);
+    background-image: url(/img/bg-3-2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 75%;
@@ -668,7 +912,8 @@ fieldset {
 
 .result {
     background-color: #f2f2f2;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-shadow: 0 1px 1px 0 rgba(0,
+        0, 0, 0.12);
 	box-sizing: border-box;
     padding: 20px;
     font-family: 'Open sans', sans-serif;
@@ -684,14 +929,13 @@ fieldset {
 
 .footer-distributed{
 	background-color: #f2f2f2;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
 
 	padding: 55px 50px;
-	margin-top: -36vh;
+	margin-top: -33vh;
 }
 
 .footer-distributed .footer-left,
@@ -824,6 +1068,10 @@ fieldset {
 	margin-bottom: 5px;
 }
 
+#projects-footer {
+    margin-top: 5vh;
+}
+
 /* Project pages */
 
 #project .row {
@@ -864,15 +1112,12 @@ video#bgvid {
 .stopfade { opacity: .5; }
 
 #vidbutton {
-    background: rgba(127,127,127,0.6);
     color: #f2f2f2;
     border: none;
-    font-family: 'Oswald', sans-serif;
-    font-size: 20pt;
-    font-weight: 400;
+    font-size: 80pt;
     position: absolute;
-    padding: 10px;
-    left: 44%;
+    text-shadow: 2px 2px 5px #333;
+    left: 47.5%;
     bottom: 50%;
 }
 
@@ -898,8 +1143,14 @@ video { display: block; }
     html {
          
     }
-    #bgvid {
-        display: none;
+    
+    .header-video  {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    video#bgvid {
+        width: 100%;
     }
 }
 
