@@ -1,4 +1,7 @@
+ var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+
 jQuery(document).ready(function ($) {
+    if(!isMobile) {
             $(window).load(function () {
                 $('.se-pre-con').fadeOut('slow', function () {
                 });
@@ -11,4 +14,9 @@ jQuery(document).ready(function ($) {
                 document.location.href = redirect
             });
         });
-        });
+        } else {
+            $("body").removeClass("preload");
+            $('.se-pre-con').fadeOut('slow', function () {
+            });
+        }
+});

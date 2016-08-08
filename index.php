@@ -152,6 +152,8 @@ $headers = 'From: '.$email_from."\r\n".
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,600italic,400italic,300italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+    
 
     <!-- Theme CSS -->
     <link href="css/main.css" rel="stylesheet">
@@ -193,6 +195,7 @@ $headers = 'From: '.$email_from."\r\n".
             </button>
             <a class="navbar-brand" href="http://truenorsefilms.com">
                 <img id="logo" src="/img/True-Norse-black.png"/>
+                <h3 id="logo-replace">True Norse Films</h3>
             </a>
           </div>
           <div id="navbar2" class="navbar-collapse collapse">
@@ -243,7 +246,7 @@ $headers = 'From: '.$email_from."\r\n".
 <section id="portfolio" class="featured">
     <div id="featured" class="hideme container">
         <div id="item1" class="row">
-          <div class="col-sm-6">
+          <div class="col-md-6">
               <video playsinline muted autoplay loop poster id="video1" src="https://player.vimeo.com/external/63204198.hd.mp4?s=6e7aa97f997713aa9a42a29387b8f8d352549f36&profile_id=113" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></video>
               <div class="row">
                   <img class="col-xs-4" src="/img/laurel-runner-up.png"/>
@@ -251,7 +254,7 @@ $headers = 'From: '.$email_from."\r\n".
                   <img class="col-xs-4" src="/img/laurel-canadian-script.png"/>
               </div>
           </div>
-          <div class="col-sm-6">
+          <div class="col-md-6">
             <div style="margin-top: -20px;" class="row">
                 <h1 style="font-size: 32pt;" class="col-xs-12">GOLDEN</h1>
             </div>
@@ -264,10 +267,10 @@ $headers = 'From: '.$email_from."\r\n".
           </div>
         </div>
         <div id ="item2" class="row">
-            <div class="col-sm-6 col-sm-push-6">
+            <div class="col-md-6 col-md-push-6">
               <iframe id="video2" width="100%" src="https://www.youtube.com/embed/CPkFqDOXRVk" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div class="col-sm-6 col-sm-pull-6">
+            <div class="col-md-6 col-md-pull-6">
                 <br>
                 <br>
                 <br>
@@ -282,10 +285,10 @@ $headers = 'From: '.$email_from."\r\n".
             </div>
         </div>
         <div id ="item3" class="row">
-          <div class="col-sm-6">
+          <div class="col-md-6">
               <iframe id="video3" src="https://player.vimeo.com/video/150197835" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
           </div>
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <div class="row">
                     <h1 style="font-size: 32pt;" class="col-xs-12">THE RED LOOKING GLASS</h1>
                 </div>

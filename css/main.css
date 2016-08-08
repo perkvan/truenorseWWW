@@ -23,27 +23,28 @@ section {
 
 h1 {
 	
-	font-family: 'Ostrich Sans';
-	src: url('/fonts/ostrich-sans-black.eot');
-	src: url(/fonts/ostrich-sans-black.woff) format('woff'), url('/fonts/ostrich-sans-black.ttf') format('truetype'), url('/fonts/ostrich-sans-black.svg') format('svg');
-	font-weight: 900;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
 	font-style: normal;
     font-size: 42pt;
     color: #012340;
+    text-transform: uppercase;
 }
 
 h2 {
-    font-family: 'Ostrich Sans';
-	font-weight: 900;
+    font-family: 'Oswald' , sans-serif;
+	font-weight: 400;
 	font-style: normal;
     color: #012340;
+    text-transform: uppercase;
 }
 
 h3 {
-    font-family: 'Ostrich Sans';
-	font-weight: 900;
+    font-family: 'Oswald' , sans-serif;
+	font-weight: 400;
 	font-style: normal;
     color: #012340;
+    text-transform: uppercase;
 }
 
 h4 {
@@ -107,6 +108,22 @@ ul {
     font-weight: 100;
 }
 
+@media screen and (max-device-width: 800px) {
+    .no-js #loader { display: none;  }
+    .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+    .se-pre-con {
+        display: none;
+    }
+    
+    .preload {
+      -webkit-transition: inherit !important;
+      -moz-transition: inherit !important;
+      -ms-transition: inherit !important;
+      -o-transition: inherit !important;
+        display: inherit;
+    }
+}
+
 
 /* Navbar area */
 
@@ -118,29 +135,6 @@ ul {
     border-radius: 0px;
     z-index: 100;
 }
-
-@media only screen and (min-width: 600px) {
-
-    .navbar-brand {
-        position: relative;
-        left: -5px;
-        width: 220px;
-        height: 120px;
-        margin-top: -20px;
-        background-color: #f2f2f2;
-        box-shadow: 1px 0 7.8px 0.2px rgba(0, 0, 0, 0.8);
-    }
-    
-    #logo {
-        height: 80px;
-        width: 220px;
-        padding-right: 24px;
-        margin-left: -4px;
-        margin-top: 15px;
-    }
-
-}
-
 
 #navbar2 ul{
     margin-top: 1.5%;
@@ -183,6 +177,114 @@ ul {
     max-width: 20px;
     width: auto !important;
 }
+
+@media only screen and (min-width: 999px) {
+
+    .navbar-brand {
+        position: relative;
+        left: -5px;
+        width: 220px;
+        height: 120px;
+        margin-top: -20px;
+        background-color: #f2f2f2;
+        box-shadow: 1px 0 7.8px 0.2px rgba(0, 0, 0, 0.8);
+    }
+    
+    #logo {
+        height: 80px;
+        width: 220px;
+        padding-right: 24px;
+        margin-left: -4px;
+        margin-top: 15px;
+    }
+    
+    #logo-replace {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 998px) {
+    
+    .navbar-header{
+        float:none;    
+    }
+    
+    .navbar-toggle {
+        display: block;
+    }
+    
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba (255,255,255,0.1);
+    }
+    
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    
+    .navbar-nav {
+        float: none !important;
+        margin: 7.5px -15px;
+    }
+    
+    .navbar-nav>li {
+        float: none;
+    }
+    
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    
+    .collapsing {
+        overflow: hidden !important;
+    }
+    
+    .navbar {
+        height: auto;
+        width: 95%;
+        position: fixed;
+        z-index: 9999;
+    }
+    
+    .navbar-brand {
+    }
+    
+    #logo {
+        display: none;
+    }
+    
+    #logo-replace{
+        margin-top: -5px;
+        display: block;
+    }
+    
+    .icon-bar {
+        background-color: #012340;
+    }
+    
+    .featured {
+        margin-top: -5vh;
+    }
+    
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar {
+        margin-left: -5%;
+    }
+}
+
 
 /* Header */
 
@@ -356,14 +458,13 @@ ul {
 }
 .serviceBox .service-content h3{
     color: #012340;
-    font: bold 24px/40px 'arial';
     text-transform: uppercase;
     margin: 30px 0 10px;
 }
 .serviceBox .service-content p{
     text-align: left;
-    font: lighter 13px/20px "verdana";
-    color: #A2A2A2;
+    font: lighter 13px/20px "Open Sans";
+    color: #012340;
     margin: 0 0 20px;
 }
 .serviceBox .read{
@@ -381,6 +482,39 @@ ul {
     background: #012340;
     color: #f2f2f2;
     text-decoration: none;
+}
+
+@media screen and (max-device-width: 800px) {
+    #services {
+        height: 140vh;
+        margin-top: 0vh;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+    }
+    .serviceBox {
+        padding: 0 5px;
+    }
+    .serviceBox .service-icon {
+        width: 70px;
+        height: 70px;
+        line-height: 77px;
+        background: #f2f2f2;
+        box-shadow: 1px 0 7.8px 0.2px rgba(0, 0, 0, 0.8);
+        margin: -38.5px auto 0;
+    }
+    .serviceBox .service-icon i{
+        color: #012340;
+        font-size: 24px;
+    }
+    .serviceBox .service-content h3{
+        margin: 20px 0 10px;
+    }
+    .serviceBox .service-content p{
+        margin: 0px;
+    }
+    .serviceBox .read{
+        padding: 30px 0 20px;
+    }
 }
 
 /* Gallery style */
@@ -580,35 +714,32 @@ div.effect-moses {
     transition: background-color 150ms linear;
 }
 
-#myContent li:nth-of-type(1) {
+
+#myContent li:nth-of-type(1n) {
     background: -webkit-linear-gradient(105deg, #bf3894 0%, #224f90 50%,#012340 100%);
 	background: linear-gradient(165deg, #bf3894 0%, #224f90 50%,#012340 100%);
 }
 
-#myContent li:nth-of-type(2) {
-    background: -webkit-linear-gradient(-70deg, #A6671B 15%, #024c8b 50%,#012340 100%);
+
+#myContent li:nth-of-type(2n) {
+    background: -webkit-linear-gradient(-70deg, #012340 0%, #024c8b 45%,#A6671B 85%);
+	background: linear-gradient(-25deg, #012340 0%, #024c8b 45%,#A6671B 85%);
+}
+/*
+#myContent li:nth-of-type(3n) {
+    background: -webkit-linear-gradient(105deg, #bf3894 0%, #224f90 50%,#012340 100%);
+	background: linear-gradient(165deg, #bf3894 0%, #224f90 50%,#012340 100%);
+}
+
+#myContent li:nth-of-type(4n) {
+	background: -webkit-linear-gradient(-70deg, #A6671B 15%, #024c8b 50%,#012340 100%);
 	background: linear-gradient(-25deg, #A6671B 15%, #024c8b 50%,#012340 100%);
 }
 
-#myContent li:nth-of-type(3) {
-    background: -webkit-linear-gradient(-45deg, #a32a19 15%, #c2d18e 66%,#499384 100%);
-	background: linear-gradient(-45deg, #a32a19 15%, #c2d18e 66%,#499384 100%);
-}
-
-#myContent li:nth-of-type(4) {
-	background: -webkit-linear-gradient(115deg, #A6671B 0%,#faf3e5 100%);
-	background: linear-gradient(-25deg, #A6671B 0%,#faf3e5 100%);
-}
-
-#myContent li:nth-of-type(5) {
-	background: -webkit-linear-gradient(115deg, #CFF09E 0%,#A8DBA8 20%,#79BD9A 40%,#3B8686 60%,#0B486B 100%);
-	background: linear-gradient(115deg, #CFF09E 0%,#A8DBA8 20%,#79BD9A 40%,#3B8686 60%,#0B486B 100%);
-}
-
-#myContent li:nth-of-type(6) {
-	background: -webkit-linear-gradient(115deg, #E1D1B7 0%,#F6E8CB 20%,#B5E1C8 40%,#85B9A3 60%,#322A1D 100%);
-	background: linear-gradient(115deg, #E1D1B7 0%,#F6E8CB 20%,#B5E1C8 40%,#85B9A3 60%,#322A1D 100%);
-}
+#myContent li:nth-of-type(5n) {
+	background: -webkit-linear-gradient(-70deg, #012340 15%, #024c8b 50%,#A6671B 100%);
+	background: linear-gradient(-25deg, #012340 15%, #024c8b 50%,#A6671B 100%);
+}*/
 
 @media only screen and (min-width: 999px){
 
@@ -619,13 +750,8 @@ div.effect-moses {
         padding: 5px;
         text-align: left;
         opacity: 1;
-        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-        transition: opacity 0.35s, transform 0.35s;
     }
 
-    div.effect-moses:hover p {
-        opacity: .65;
-    }
     
     #projects-gallery div.effect-moses {
         height: 200px;
@@ -643,13 +769,18 @@ div.effect-moses {
         width: 100%;
         min-height: 100%;
         margin: 0 auto;
-        opacity: 0.35;
-        -webkit-transition: opacity 0.35s;
-        transition: opacity 0.35s;
+        opacity: 1;
+        filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+        -webkit-filter: grayscale(0%);
+        -webkit-transition: opacity 500ms, filter 500ms linear;
+        transition: opacity 500ms, filter 500ms linear;
     }
     
     #myContent div.effect-moses:hover img {
-        opacity: 0.9;
+        filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"); /* Firefox 10+, Firefox on Android */
+        filter: gray; /* IE6-9 */
+        -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+        opacity: .45;
     }
 }
 
@@ -1071,6 +1202,14 @@ fieldset {
     margin-top: 5vh;
 }
 
+@media screen and (max-device-width: 800px) {
+    #bg-3 {
+    height: 140vh;
+    margin-bottom: -77.5vh;
+    padding-bottom: 120vh;
+}
+}
+
 /* Project pages */
 
 #project .row {
@@ -1094,7 +1233,7 @@ video#bgvid {
     top: 50%;
     left: 50%;
     min-width: 100%;
-    min-height: 100%;
+    max-height: 100%;
     width: auto;
     height: auto;
     z-index: -100;
@@ -1139,8 +1278,13 @@ video#bgvid {
 video { display: block; }
 
 @media screen and (max-device-width: 800px) {
+    
     html {
          
+    }
+    
+    #header h1 {
+        font-size: 42pt;
     }
     
     .header-video  {
@@ -1150,7 +1294,13 @@ video { display: block; }
     
     video#bgvid {
         width: 100%;
+        min-height: 100%;
     }
+    
+    #project .row {
+        margin: 5px 5px;
+    }
+    
 }
 
 /* If you don't want the footer to be responsive, remove these media queries */
@@ -1177,32 +1327,4 @@ video { display: block; }
 }
 
 
-
-@media only screen and (max-width: 599px) {
-    
-    .navbar {
-        height: auto;
-        width: 90%;
-        position: fixed;
-        z-index: 9999;
-    }
-    
-    .navbar-brand {
-    }
-    
-    #logo {
-        margin-top: -10px;
-        height: 40px;
-        width: auto;
-    }
-    
-    .icon-bar {
-        background-color: #012340;
-    }
-    
-    .featured {
-        margin-top: -5vh;
-    }
-    
-}
 
