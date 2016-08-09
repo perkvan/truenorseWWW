@@ -1210,6 +1210,43 @@ fieldset {
 }
 }
 
+/* About Us Page */
+
+#about-us-header {
+    height: 100vh;
+    background-image: url(/img/bg-1.jpg);
+    background-position: 50% 25%;
+    background-size: cover;
+    margin: 0;
+    position: absolute;
+}
+
+#about-us .container {
+    background-color: #f2f2f2;
+    box-shadow: 1px 0 7.8px 0.2px rgba(0, 0, 0, 0.8);
+    position: relative;
+    padding: 20px -20px 40px -20px;
+    margin: 80vh auto 0 auto;
+}
+
+#about-intro {
+    margin-top: 5%;
+}
+
+#about-intro h2 {
+    text-align: center;
+    color: #f2f2f2;
+    text-shadow: 2px 2px 5px #333;
+    font-size: 32pt;
+}
+
+#about-intro h3 {
+    text-align: center;
+    color: #f2f2f2;
+    text-shadow: 2px 2px 5px #333;
+    margin-bottom: 25px;
+}
+
 /* Project pages */
 
 #project .row {

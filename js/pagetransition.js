@@ -7,13 +7,13 @@ jQuery(document).ready(function ($) {
                 });
                 $("body").removeClass("preload");
             });
-        $('a').click(function(e){
+        /*$('a').click(function(e){
             redirect = $(this).attr('href');
             e.preventDefault();
             $('body').fadeOut(400, function(){
                 document.location.href = redirect
             });
-        });
+        });*/
         } else {
             $("body").removeClass("preload");
             $('.se-pre-con').fadeOut('slow', function () {

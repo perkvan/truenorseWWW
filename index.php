@@ -201,9 +201,9 @@ $headers = 'From: '.$email_from."\r\n".
           <div id="navbar2" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="active"><a href="/index.php">Home</a></li>
-              <li><a href="/project-template.html">Example Proj.</a></li>
+              <!--<li><a href="/about-us.html">About Us</a></li>-->
               <li><a href="/projects.html">Projects</a></li>
-              <li><a href="#footer">Contact Us</a></li>
+              <li><a href="home-contact">Contact Us</a></li>
               <li>
                  <div id="soc-header">
                       <a href="https://www.facebook.com/True-Norse-Films-447289181993942/"><i class="fa fa-facebook
@@ -373,7 +373,7 @@ $headers = 'From: '.$email_from."\r\n".
     <div class="container">
         <h1 style="text-align: center;">More Work</h1>
         <ul id="myContent"> 			
-            <li><div class="effect-moses"><a href="/project-template.html"><img src="/img/proj/raidho-2.png" alt="" /></a>
+            <li><div class="effect-moses"><a href="https://vimeo.com/44048804" target="_blank"><img src="/img/proj/raidho-2.png" alt="" /></a>
                 <figcaption>
 							<p>Direction</p>
 							<p>Writing</p>
@@ -383,13 +383,17 @@ $headers = 'From: '.$email_from."\r\n".
                 <div class="gallery-subcaption">
                     <h2>Raidho</h2>
                     <p>Additional text could go here to make these objects more acccessible immediately. Perhaps a quick blurb on why they should click.</p>
-                    <a class="icon" href="#"><i class="fa fa-vimeo"></i></a>
-                    <a class="icon" href="#"><i class="fa fa-facebook"></i></a>
-                    <a class="icon" href="#"><i class="fa fa-flickr"></i></a>
-                    <a href="/project-template.html">read more</a>
+                    <p style="margin-top: 15px; display:inline-block; float: left; font-weight: bold; font-size: 10pt;">share:</p>
+                    <a class="icon" href="http://www.facebook.com/sharer.php?u=https://vimeo.com/44048804" target="_blank">
+                    <i class="fa fa-facebook"></i></a>
+                    <a class="icon" href="https://plus.google.com/share?url=https://vimeo.com/44048804" target="_blank">
+                    <i class="fa fa-google"></i></a>
+                    <a class="icon" href="https://twitter.com/share?url=https://vimeo.com/44048804&amp;text=Raidho%20by%20True%20Norse%20Films&amp;" target="_blank">
+                    <i class="fa fa-twitter"></i></a>
+                    <a href="https://vimeo.com/44048804" target="_blank">view film</a>
                 </div>
             </li>
-            <li><div class="effect-moses"><a href="/project-template.html"><img src="/img/proj/deeply-2.png" alt="" /></a>
+            <li><div class="effect-moses"><a href="https://vimeo.com/102868220" target="_blank"><img src="/img/proj/deeply-1.png" alt="" /></a>
                 <figcaption>
 							<p>Direction</p>
 							<p>Writing</p>
@@ -399,13 +403,17 @@ $headers = 'From: '.$email_from."\r\n".
                 <div class="gallery-subcaption">
                     <h2>Deeply</h2>
                     <p>Additional text could go here to make these objects more acccessible immediately. Perhaps a quick blurb on why they should click.</p>
-                    <a class="icon" href="#"><i class="fa fa-vimeo"></i></a>
-                    <a class="icon" href="#"><i class="fa fa-facebook"></i></a>
-                    <a class="icon" href="#"><i class="fa fa-flickr"></i></a>
-                    <a href="/project-template.html">read more</a>
+                    <p style="margin-top: 15px; display:inline-block; float: left; font-weight: bold; font-size: 10pt;">share:</p>
+                    <a class="icon" href="http://www.facebook.com/sharer.php?u=https://vimeo.com/102868220" target="_blank">
+                    <i class="fa fa-facebook"></i></a>
+                    <a class="icon" href="https://plus.google.com/share?url=https://vimeo.com/102868220" target="_blank">
+                    <i class="fa fa-google"></i></a>
+                    <a class="icon" href="https://twitter.com/share?url=https://vimeo.com/102868220&amp;text=Raidho%20by%20True%20Norse%20Films&amp;" target="_blank">
+                    <i class="fa fa-twitter"></i></a>
+                    <a href="https://vimeo.com/102868220" target="_blank">view film</a>
                 </div>
             </li>
-            <li><div class="effect-moses"><a href="/project-template.html"><img src="/img/proj/face-v2.jpg" alt="" /></a>
+            <li><div class="effect-moses"><a href="https://vimeo.com/121327040" target="_blank"><img src="/img/proj/face-v2.jpg" alt="" /></a>
                 <figcaption>
 							<p>Direction</p>
 							<p>Writing</p>
@@ -414,28 +422,36 @@ $headers = 'From: '.$email_from."\r\n".
                 </div>
                 <div class="gallery-subcaption">
                     <h2>Air Between Us</h2>
-                    <p>Additional text could go here to make these objects more acccessible immediately. This is all filler.</p>
-                    <a class="icon" href="#"><i class="fa fa-vimeo"></i></a>
-                    <a class="icon" href="#"><i class="fa fa-facebook"></i></a>
-                    <a class="icon" href="#"><i class="fa fa-flickr"></i></a>
-                    <a href="/project-template.html">read more</a>
+                    <p>Additional text could go here to make these objects more acccessible immediately. Perhaps a quick blurb on why they should click.</p>
+                    <p style="margin-top: 15px; display:inline-block; float: left; font-weight: bold; font-size: 10pt;">share:</p>
+                    <a class="icon" href="http://www.facebook.com/sharer.php?u=https://vimeo.com/121327040" target="_blank">
+                    <i class="fa fa-facebook"></i></a>
+                    <a class="icon" href="https://plus.google.com/share?url=https://vimeo.com/121327040" target="_blank">
+                    <i class="fa fa-google"></i></a>
+                    <a class="icon" href="https://twitter.com/share?url=https://vimeo.com/121327040&amp;text=Raidho%20by%20True%20Norse%20Films&amp;" target="_blank">
+                    <i class="fa fa-twitter"></i></a>
+                    <a href="https://vimeo.com/121327040" target="_blank">view film</a>
                 </div>
             </li>
-            <li><div class="effect-moses"><a href="/project-template.html"><img src="/img/proj/fra-asken.png" alt="" /></a>
+            <li><div class="effect-moses"><a href="https://vimeo.com/137496371" target="_blank"><img src="/img/proj/fra-asken.png" alt="" /></a>
                 <figcaption>
 							<p>Direction</p>
 							<p>Writing</p>
-                            <p>Cinematography</p>
-                            <p>Editing</p>
+							<p>Cinematography</p>
+							<p>Editing</p>
 						</figcaption>
                 </div>
                 <div class="gallery-subcaption">
                     <h2>Fra Asken</h2>
                     <p>Additional text could go here to make these objects more acccessible immediately. Perhaps a quick blurb on why they should click.</p>
-                    <a class="icon" href="#"><i class="fa fa-vimeo"></i></a>
-                    <a class="icon" href="#"><i class="fa fa-facebook"></i></a>
-                    <a class="icon" href="#"><i class="fa fa-flickr"></i></a>
-                    <a href="/project-template.html">read more</a>
+                    <p style="margin-top: 15px; display:inline-block; float: left; font-weight: bold; font-size: 10pt;">share:</p>
+                    <a class="icon" href="http://www.facebook.com/sharer.php?u=https://vimeo.com/137496371" target="_blank">
+                    <i class="fa fa-facebook"></i></a>
+                    <a class="icon" href="https://plus.google.com/share?url=https://vimeo.com/137496371" target="_blank">
+                    <i class="fa fa-google"></i></a>
+                    <a class="icon" href="https://twitter.com/share?url=https://vimeo.com/137496371&amp;text=Raidho%20by%20True%20Norse%20Films&amp;" target="_blank">
+                    <i class="fa fa-twitter"></i></a>
+                    <a href="https://vimeo.com/137496371" target="_blank">view film</a>
                 </div>
             </li>
         </ul> 
@@ -473,7 +489,7 @@ $headers = 'From: '.$email_from."\r\n".
         </div>
     </div>
 </section>
-   <section class="container">
+   <section id="home-contact" class="container">
     <footer class="footer-distributed">
 
 			<div class="footer-left">
@@ -484,10 +500,10 @@ $headers = 'From: '.$email_from."\r\n".
 					<a href="#">Home</a>
 					·
 					<a href="/projects.html">Projects</a>
+                    ·
+                    <!--<a href="/about-us.html">About us</a>-->
 					·
 					<a href="#bg-3">Contact</a>
-					·
-                    <a href="/about-us.html">About us</a>
 				</p>
 
 				<p class="footer-company-name">True Norse Films&copy; 2015</p>
