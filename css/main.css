@@ -251,10 +251,8 @@ ul {
     }
     
     .navbar {
+        margin-left: 0;
         height: auto;
-        width: 95%;
-        position: fixed;
-        z-index: 9999;
     }
     
     .navbar-brand {
@@ -281,7 +279,6 @@ ul {
 
 @media only screen and (max-width: 767px) {
     .navbar {
-        margin-left: -5%;
     }
 }
 
@@ -356,6 +353,12 @@ ul {
 .vertical-center {
     display: table-cell;
     vertical-align: middle;
+}
+
+.center-children {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #gallery .container {
@@ -1270,7 +1273,7 @@ video#bgvid {
     top: 50%;
     left: 50%;
     min-width: 100%;
-    max-height: 100%;
+    min-height: 100%;
     width: auto;
     height: auto;
     z-index: -100;
@@ -1279,6 +1282,7 @@ video#bgvid {
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     background-size: cover; 
+    background: #000;
 }
 
 video#bgvid {
@@ -1286,19 +1290,26 @@ video#bgvid {
 }
 .stopfade { opacity: .5; }
 
+.header-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 #vidbutton {
     color: #f2f2f2;
     border: none;
     font-size: 80pt;
     position: absolute;
     text-shadow: 2px 2px 5px #333;
-    left: 47.5%;
     bottom: 50%;
 }
 
 .fullscreen {
     z-index: 9998 !important;
     position: absolute;
+    opacity: 1;
     top: 50%;
     left: 50%;
     min-width: 100%;
@@ -1309,12 +1320,12 @@ video#bgvid {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background-size: cover; 
+    background-size: cover;
 }
 
 video { display: block; }
 
-@media screen and (max-device-width: 800px) {
+@media screen and (max-device-width: 998px) {
     
     html {
          
@@ -1324,14 +1335,13 @@ video { display: block; }
         font-size: 42pt;
     }
     
-    .header-video  {
-        width: 100%;
-        overflow: hidden;
+    video#bgvid {
+        max-width: 100%;
+        height: 100%;
     }
     
-    video#bgvid {
-        width: 100%;
-        min-height: 100%;
+    #vidbutton {
+        bottom: 45%;
     }
     
     #project .row {

@@ -3,8 +3,10 @@
 jQuery(document).ready(function ($) {
     if(!isMobile) {
             $(window).load(function () {
-                $('.se-pre-con').fadeOut('slow', function () {
-                });
+                setTimeout(function(){
+                    $('.se-pre-con').fadeOut('slow', function () {
+                    });
+                },2000);
                 $("body").removeClass("preload");
             });
         /*$('a').click(function(e){

@@ -201,7 +201,7 @@ $headers = 'From: '.$email_from."\r\n".
           <div id="navbar2" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="active"><a href="/index.php">Home</a></li>
-              <!--<li><a href="/about-us.html">About Us</a></li>-->
+              <li><a href="/about-us.html">About Us</a></li>
               <li><a href="/projects.html">Projects</a></li>
               <li><a href="home-contact">Contact Us</a></li>
               <li>
@@ -501,7 +501,7 @@ $headers = 'From: '.$email_from."\r\n".
 					·
 					<a href="/projects.html">Projects</a>
                     ·
-                    <!--<a href="/about-us.html">About us</a>-->
+                    <a href="/about-us.html">About us</a>
 					·
 					<a href="#bg-3">Contact</a>
 				</p>
