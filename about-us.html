@@ -64,10 +64,11 @@
               <li><a href="#footer">Contact Us</a></li>
               <li>
                  <div id="soc-header">
-                      <a href="#"><img src="/img/facebook.png"/></a>
-                      <a href="#"><img src="/img/Instagram.png"/></a>
-                      <a href="#"><img src="/img/twitter.png"/></a>
-                      <a href="#"><img src="/img/Vimeo.png"/></a>
+                      <a href="https://www.facebook.com/True-Norse-Films-447289181993942/"><i class="fa fa-facebook
+                          "></i></a>
+                      <a href="https://www.instagram.com/truenorsefilms/"><i class="fa fa-instagram"></i></a>
+                      <a href="https://twitter.com/kkvanbeck"><i class="fa fa-twitter"></i></a>
+                      <a href="https://vimeo.com/user2810479"><i class="fa fa-vimeo"></i></a>
                   </div>
               </li>
             </ul>
@@ -93,10 +94,10 @@
 </section>
 
 <div class="bottom-center showme">
-            <h4 style="color: #f2f2f2; font-weight: 100; margin-top: -50px; font-style: oblique; font-size: 10pt;">scroll to read about this film</h4>
+            <h4 style="color: #f2f2f2; font-weight: 100; margin-top: -50px; font-style: oblique; font-size: 10pt;">read more below</h4>
 </div>
 <section id="about-us">
-    <div class="container">
+    <div class="hideme container">
         <h1 style="text-align:center;">About Us</h1>
         <div class="row">
             <div class="col-md-5">
@@ -120,13 +121,13 @@
                 <img style="height: 100px;width: auto;" src="/img/True-Norse-black.png" />
 
 				<p class="footer-links">
-					<a href="#">Home</a>
+					<a href="/index.php">Home</a>
 					·
 					<a href="/projects.html">Projects</a>
                     ·
                     <a href="/about-us.html">About us</a>
 					·
-					<a href="#bg-3">Contact</a>
+					<a class="active" href="">Contact</a>
 				</p>
 
 				<p class="footer-company-name">True Norse Films&copy; 2015</p>
@@ -175,87 +176,8 @@
     </div>
 </section>
     
-    <script>
-        
-    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
-        
-    $(document).ready(function() {
-    if(!isMobile) {
-
-        /* Every time the window is scrolled ... */
-        $(window).scroll( function(){
-            
-
-        /* Check the location of each desired element */
-        $('.hideme').each( function(i){
-
-            var bottom_of_object = $(this).offset().top;
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-            /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ){
-
-                $(this).animate({'opacity':'1', 'margin-top' : '8%'},750);
-
-            }
-
-        });
-        $('.showme').each( function(i){
-
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height() - '300';
-
-            /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ){
-
-                $(this).animate({'opacity':'0', 'margin-top' : '7.5%'},750);
-
-            }
-
-        });
-
-        });
-    } else {
-        $('.hideme').each( function(i){ 
-            $(this).animate({'opacity':'1', 'margin-top' : '0'},0);
-        });
-        
-        $('.showme').each( function(i){
-           $(this).animate({'opacity':'0'},0);
-        });
-    }
-    });
-    </script>
+    <script src="/js/reveal.js"></script>
     
-    <script>
-    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
-    var vid = document.getElementById("bgvid"),
-    videoButton = document.getElementById("vidbutton");
-
-    window.ispaused = true;
-    var expanded = false;
-    if (!isMobile) {
-        $("#vidbutton").on("click keyup", function(e) {
-            if (e.type == "click" || e.keyCode == 27 || e.keyCode == 8) {
-            vid.paused ? vid.play() : vid.pause();
-            if (!expanded){
-                  $(this).animate({'left' : '15px', 'bottom' : '15px', 'font-size' : '20pt'}, {duration : 400}).css("z-index", "9999");
-                  expanded = true;
-              }
-              else
-              {
-                 $(this).animate({'left' : '47.5%', 'bottom' : '50%', 'font-size' : '80pt'}, {duration: 400}).css("z-index", "0");
-                  expanded = false;
-              };
-            $("#bgvid").toggleClass("fullscreen");
-            $("#vidbutton").toggleClass("fa-pause-circle");
-            }
-        });
-    } else {
-            $("#vidbutton").hide();
-
-    }
-    </script>
     
     <script src="/js/pagetransition.js"></script>
     

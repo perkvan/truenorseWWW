@@ -31,17 +31,6 @@
     <![endif]-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
     <script src="/js/sss.js"></script>
-    <script>
-        jQuery(function($) {
-        $('.slider').sss({
-            slideShow : true, // Set to false to prevent SSS from automatically animating.
-            startOn : 0, // Slide to display first. Uses array notation (0 = first slide).
-            transition : 1500, // Length (in milliseconds) of the fade transition.
-            speed : 6500, // Slideshow speed in milliseconds.
-            showNav : false, // Set to false to hide navigation arrows.
-        });
-        });
-    </script>
     <!--[if lt IE 9]>
         <script>
             document.createElement('video');
@@ -104,7 +93,7 @@
     <div class="hideme container">
         <h1 style="text-align: center;">Gallery</h1>
         <ul id="myContent">
-            <li><div class="effect-moses"><a href="https://vimeo.com/63204198" target="_blank"><img src="https://i.vimeocdn.com/video/455202724.webp?mw=1280&mh=720" alt="" /></a>
+            <li><div class="effect-moses"><a href="/golden.html"><img src="https://i.vimeocdn.com/video/455202724.webp?mw=1280&mh=720" alt="" /></a>
                 <figcaption>
 							<p>Direction</p>
 							<p>Cinematography</p>
@@ -121,7 +110,7 @@
                     <i class="fa fa-google"></i></a>
                     <a class="icon" href="https://twitter.com/share?url=https://vimeo.com/63204198&amp;text=Golden%20;via truenorsefilms" target="_blank">
                     <i class="fa fa-twitter"></i></a>
-                    <a href="https://vimeo.com/63204198" target="_blank">watch video</a>
+                    <a href="/golden.html">read more</a>
                 </div>
             </li>
             <li><div class="effect-moses"><a href="https://www.youtube.com/watch?v=CPkFqDOXRVk" target="_blank"><img style="margin-top: -10%;" src="http://img.youtube.com/vi/CPkFqDOXRVk/0.jpg" alt="" /></a>
@@ -162,7 +151,7 @@
                     <a href="https://vimeo.com/150197835" target="_blank">watch video</a>
                 </div>
             </li>
-            <li><div class="effect-moses"><a href="https://vimeo.com/121327040" target="_blank"><img src="/img/proj/face-v2.jpg" alt="" /></a>
+            <li><div class="effect-moses"><a href="/air-between-us.html"><img src="/img/proj/face-v2.jpg" alt="" /></a>
                 <figcaption>
 							<p>Direction</p>
 							<p>Writing</p>
@@ -179,10 +168,10 @@
                     <i class="fa fa-google"></i></a>
                     <a class="icon" href="https://twitter.com/share?url=https://vimeo.com/121327040&amp;text=Air%20%20Between%20Us%20;via truenorsefilms" target="_blank">
                     <i class="fa fa-twitter"></i></a>
-                    <a href="https://vimeo.com/121327040" target="_blank">watch video</a>
+                    <a href="/air-between-us.html">read more</a>
                 </div>
             </li>
-            <li><div class="effect-moses"><a href="https://vimeo.com/137496371" target="_blank"><img src="/img/proj/fra-asken.png" alt="" /></a>
+            <li><div class="effect-moses"><a href="/fra-asken.html"><img src="/img/proj/fra-asken.png" alt="" /></a>
                 <figcaption>
 							<p>Direction</p>
 							<p>Writing</p>
@@ -200,7 +189,7 @@
                     <i class="fa fa-google"></i></a>
                     <a class="icon" href="https://twitter.com/share?url=https://vimeo.com/137496371&amp;text=Fra%20Asken%20;via truenorsefilms;" target="_blank">
                     <i class="fa fa-twitter"></i></a>
-                    <a href="https://vimeo.com/137496371" target="_blank">watch video</a>
+                    <a href="/fra-asken.html">read more</a>
                 </div>
             </li>
             <li><div class="effect-moses"><a href="https://vimeo.com/102868220" target="_blank"><img src="/img/proj/deeply-2.png" alt="" /></a>
@@ -343,89 +332,9 @@
 
     </footer>
     </div>
-</section>
-    <script type="text/javascript">
-        $(document).ready(function()
-        {
-         $(document).on('submit', '#contact', function()
-         {
-
-          var data = $(this).serialize();
-
-
-          $.ajax({
-
-          type : 'POST',
-          url  : 'contact_form.php',
-          data : data,
-          success :  function(data)
-               {
-              $("#contact").fadeOut(500).hide(function()
-              {
-               $(".result").fadeIn(500).removeClass('hidden').show(function()
-               {});
-              });
-
-               }
-          });
-          return false;
-         });
-
-        });
-    </script>
+</section>    
     
-    
-    <script>
-        
-    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
-        
-    $(document).ready(function() {
-    if(!isMobile) {
-
-        /* Every time the window is scrolled ... */
-        $(window).scroll( function(){
-            
-
-        /* Check the location of each desired element */
-        $('.hideme').each( function(i){
-
-            var bottom_of_object = $(this).offset().top;
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-            /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ){
-
-                $(this).animate({'opacity':'1', 'margin-top' : '8%'},750);
-
-            }
-
-        });
-        $('.showme').each( function(i){
-
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height() - '300';
-
-            /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ){
-
-                $(this).animate({'opacity':'0', 'margin-top' : '7.5%'},750);
-
-            }
-
-        });
-
-        });
-    } else {
-        $('.hideme').each( function(i){ 
-            $(this).animate({'opacity':'1', 'margin-top' : '0'},0);
-        });
-        
-        $('.showme').each( function(i){
-           $(this).animate({'opacity':'0'},0);
-        });
-    }
-    });
-    </script>
+    <script src="/js/reveal.js"></script>
     
     <script src="/js/pagetransition.js"></script>
     

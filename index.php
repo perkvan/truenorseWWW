@@ -166,13 +166,14 @@ $headers = 'From: '.$email_from."\r\n".
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="/js/reveal.js"></script>
     <script src="/js/sss.js"></script>
     <script>
         jQuery(function($) {
         $('.slider').sss({
             slideShow : true, // Set to false to prevent SSS from automatically animating.
             startOn : 0, // Slide to display first. Uses array notation (0 = first slide).
-            transition : 1500, // Length (in milliseconds) of the fade transition.
+            transition : 2000, // Length (in milliseconds) of the fade transition.
             speed : 6500, // Slideshow speed in milliseconds.
             showNav : false, // Set to false to hide navigation arrows.
         });
@@ -263,17 +264,16 @@ $headers = 'From: '.$email_from."\r\n".
             </div>
               <br>
             <p>Hank is a simple man, he has spent the last fifty years with his loving wife Maria. He is unaccustomed to change and set in his routines. On his fiftieth wedding anniversary Hank arrives home to find that his beloved Maria has passed away. Unable to process the situation Hank falls into his daily routines. A phone call from his daughter reminds Hank of the anniversary and he is determined to have one last perfect day with Maria. At dinner Hank comes to the realization that it is time to say goodbye to his partner.</p>
-            <p><a href="https://youtu.be/BbmS-NOgZIk">Click here to see an interview with Kjell Kvanbeck and Justin Newcomb.</a></p>
+            <div class="gallery-subcaption">
+                <a href="/golden.html">read more</a>
+            </div>
           </div>
         </div>
         <div id ="item2" class="row">
             <div class="col-md-6 col-md-push-6">
               <iframe id="video2" width="100%" src="https://www.youtube.com/embed/CPkFqDOXRVk" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div class="col-md-6 col-md-pull-6">
-                <br>
-                <br>
-                <br>
+            <div class="col-md-6 col-md-pull-6 vertical-center">
                 <div class="row">
                     <h1 style="font-size: 32pt;" class="col-xs-12">DR. SMITH'S NATIONAL COMMERCIAL</h1>
                 </div>
@@ -373,24 +373,24 @@ $headers = 'From: '.$email_from."\r\n".
     <div class="container">
         <h1 style="text-align: center;">More Work</h1>
         <ul id="myContent"> 			
-            <li><div class="effect-moses"><a href="https://vimeo.com/44048804" target="_blank"><img src="/img/proj/raidho-2.png" alt="" /></a>
+            <li><div class="effect-moses"><a href="/golden.html" target="_blank"><img src="/img/proj/hands.png" alt="" /></a>
                 <figcaption>
 							<p>Direction</p>
-							<p>Writing</p>
 							<p>Cinematography</p>
+							<p>Storyboarding</p>
 						</figcaption>
                 </div>
                 <div class="gallery-subcaption">
-                    <h2>Raidho</h2>
-                    <p>Additional text could go here to make these objects more acccessible immediately. Perhaps a quick blurb on why they should click.</p>
+                    <h2>Golden</h2>
+                    <p>Best MN MADE Short, Minneapolis - St. Paul International Film Festival 2013. Runner up American Gem Screenplay Competition.</p>
                     <p style="margin-top: 15px; display:inline-block; float: left; font-weight: bold; font-size: 10pt;">share:</p>
-                    <a class="icon" href="http://www.facebook.com/sharer.php?u=https://vimeo.com/44048804" target="_blank">
+                    <a class="icon" href="http://www.facebook.com/sharer.php?u=https://vimeo.com/63204198" target="_blank">
                     <i class="fa fa-facebook"></i></a>
-                    <a class="icon" href="https://plus.google.com/share?url=https://vimeo.com/44048804" target="_blank">
+                    <a class="icon" href="https://plus.google.com/share?url=https://vimeo.com/63204198" target="_blank">
                     <i class="fa fa-google"></i></a>
-                    <a class="icon" href="https://twitter.com/share?url=https://vimeo.com/44048804&amp;text=Raidho%20by%20True%20Norse%20Films&amp;" target="_blank">
+                    <a class="icon" href="https://twitter.com/share?url=https://vimeo.com/63204198&amp;text=Golden%20;via truenorsefilms" target="_blank">
                     <i class="fa fa-twitter"></i></a>
-                    <a href="https://vimeo.com/44048804" target="_blank">view film</a>
+                    <a href="/golden.html">read more</a>
                 </div>
             </li>
             <li><div class="effect-moses"><a href="https://vimeo.com/102868220" target="_blank"><img src="/img/proj/deeply-1.png" alt="" /></a>
@@ -413,7 +413,7 @@ $headers = 'From: '.$email_from."\r\n".
                     <a href="https://vimeo.com/102868220" target="_blank">view film</a>
                 </div>
             </li>
-            <li><div class="effect-moses"><a href="https://vimeo.com/121327040" target="_blank"><img src="/img/proj/face-v2.jpg" alt="" /></a>
+            <li><div class="effect-moses"><a href="https://vimeo.com/121327040" target="_blank"><img src="/img/proj/couch-1.jpeg" alt="" /></a>
                 <figcaption>
 							<p>Direction</p>
 							<p>Writing</p>
@@ -430,7 +430,7 @@ $headers = 'From: '.$email_from."\r\n".
                     <i class="fa fa-google"></i></a>
                     <a class="icon" href="https://twitter.com/share?url=https://vimeo.com/121327040&amp;text=Raidho%20by%20True%20Norse%20Films&amp;" target="_blank">
                     <i class="fa fa-twitter"></i></a>
-                    <a href="https://vimeo.com/121327040" target="_blank">view film</a>
+                    <a href="/air-between-us.html">read more</a>
                 </div>
             </li>
             <li><div class="effect-moses"><a href="https://vimeo.com/137496371" target="_blank"><img src="/img/proj/fra-asken.png" alt="" /></a>
@@ -451,7 +451,7 @@ $headers = 'From: '.$email_from."\r\n".
                     <i class="fa fa-google"></i></a>
                     <a class="icon" href="https://twitter.com/share?url=https://vimeo.com/137496371&amp;text=Raidho%20by%20True%20Norse%20Films&amp;" target="_blank">
                     <i class="fa fa-twitter"></i></a>
-                    <a href="https://vimeo.com/137496371" target="_blank">view film</a>
+                    <a href="/fra-asken.html">read more</a>
                 </div>
             </li>
         </ul> 
@@ -581,59 +581,6 @@ $headers = 'From: '.$email_from."\r\n".
         });
     </script>
     
-    
-    <script>
-        
-    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
-        
-    $(document).ready(function() {
-    if(!isMobile) {
-
-        /* Every time the window is scrolled ... */
-        $(window).scroll( function(){
-            
-
-        /* Check the location of each desired element */
-        $('.hideme').each( function(i){
-
-            var bottom_of_object = $(this).offset().top;
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-            /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ){
-
-                $(this).animate({'opacity':'1', 'margin-top' : '8%'},750);
-
-            }
-
-        });
-        $('.showme').each( function(i){
-
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height() - '300';
-
-            /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ){
-
-                $(this).animate({'opacity':'0', 'margin-top' : '7.5%'},750);
-
-            }
-
-        });
-
-        });
-    } else {
-        $('.hideme').each( function(i){ 
-            $(this).animate({'opacity':'1', 'margin-top' : '0'},0);
-        });
-        
-        $('.showme').each( function(i){
-           $(this).animate({'opacity':'0'},0);
-        });
-    }
-    });
-    </script>
-    
    <script>
     var vid = document.getElementById("video1"),
     videoButton = document.getElementById("video1");
@@ -655,9 +602,10 @@ $headers = 'From: '.$email_from."\r\n".
           }
         });
     </script>
-    
-    <script src="/js/pagetransition.js"></script>    
-    
+     
+    <script src="js/video-player.js"></script>
+    <script src="/js/reveal.js"></script>
+    <script src="/js/pagetransition.js"></script>
     <!-- Smooth Scroll -->
     <script type="text/javascript" src="/js/smoothscroll.js"></script>
 
@@ -667,9 +615,10 @@ $headers = 'From: '.$email_from."\r\n".
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
     
+    
 
 
 </body>
-<div class="se-pre-con"><h2 id="load-msg">Loading, thank you for your patience.</h2></div>
+<div id="pre-screen" class="se-pre-con"><h2 id="load-msg">Loading, thank you for your patience.</h2></div>
 
 </html>
