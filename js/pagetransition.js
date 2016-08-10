@@ -10,13 +10,13 @@ $(document).ready(function ($) {
                 });
                 $("body").removeClass("preload");
             });
-        /*$('a').click(function(e){
+        $(".tnlink").click(function(e){
             redirect = $(this).attr('href');
             e.preventDefault();
-            $('body').fadeOut(400, function(){
+            $('body').fadeOut('slow', function(){
                 document.location.href = redirect
             });
-        });*/
+        });
         } else {
             $("body").removeClass("preload");
             $(".se-pre-con").remove();

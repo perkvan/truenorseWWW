@@ -201,10 +201,10 @@ $headers = 'From: '.$email_from."\r\n".
           </div>
           <div id="navbar2" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="/index.php">Home</a></li>
-              <li><a href="/about-us.html">About Us</a></li>
-              <li><a href="/projects.html">Projects</a></li>
-              <li><a href="home-contact">Contact Us</a></li>
+              <li><a class="tnlink" href="">Home</a></li>
+              <li><a class="tnlink" href="/projects.html">Projects</a></li>
+              <li><a class="tnlink" href="/about-us.html">About Us</a></li>
+              <li><a href="#contact-bottom">Contact Us</a></li>
               <li>
                  <div id="soc-header">
                       <a href="https://www.facebook.com/True-Norse-Films-447289181993942/"><i class="fa fa-facebook
@@ -265,7 +265,7 @@ $headers = 'From: '.$email_from."\r\n".
               <br>
             <p>Hank is a simple man, he has spent the last fifty years with his loving wife Maria. He is unaccustomed to change and set in his routines. On his fiftieth wedding anniversary Hank arrives home to find that his beloved Maria has passed away. Unable to process the situation Hank falls into his daily routines. A phone call from his daughter reminds Hank of the anniversary and he is determined to have one last perfect day with Maria. At dinner Hank comes to the realization that it is time to say goodbye to his partner.</p>
             <div class="gallery-subcaption">
-                <a href="/golden.html">read more</a>
+                <a class="tnlink" href="/golden.html">read more</a>
             </div>
           </div>
         </div>
@@ -316,11 +316,12 @@ $headers = 'From: '.$email_from."\r\n".
                     </div>
                     <div class="service-content">
                         <h3> Film </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum porta blandit. Fusce auctor risus turpis, et sodales sapien interdum at. Aenean sodales sed nibh ac tincidunt. Maecenas. </p>
+                        <p>Let us help you capture those special moments, cover your story or give a personal identity to your business.</p>
                     </div>
+                    <!--
                     <div class="read">
                         <a href="#">More</a>
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
@@ -330,11 +331,12 @@ $headers = 'From: '.$email_from."\r\n".
                     </div>
                     <div class="service-content">
                         <h3> Photography </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum porta blandit. Fusce auctor risus turpis, et sodales sapien interdum at. Aenean sodales sed nibh ac tincidunt. Maecenas. </p>
+                        <p>Looking for someone to capture your family event or help elevate your business to the next level, we provide tailored photography packages that work with any budget.</p>
                     </div>
+                    <!--
                     <div class="read">
                         <a href="#">More</a>
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
@@ -344,11 +346,12 @@ $headers = 'From: '.$email_from."\r\n".
                     </div>
                     <div class="service-content">
                         <h3> Design </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum porta blandit. Fusce auctor risus turpis, et sodales sapien interdum at. Aenean sodales sed nibh ac tincidunt. Maecenas. </p>
+                        <p>There is nothing more important than making a good first impression. Let us help with a new logo, product branding or any other design needs you have.</p>
                     </div>
+                    <!--
                     <div class="read">
                         <a href="#">More</a>
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
@@ -358,11 +361,12 @@ $headers = 'From: '.$email_from."\r\n".
                     </div>
                     <div class="service-content">
                         <h3> Web </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum porta blandit. Fusce auctor risus turpis, et sodales sapien interdum at. Aenean sodales sed nibh ac tincidunt. Maecenas. </p>
+                        <p>A website is essential to every modern day business. We can help usher you into the digital age or spruce up an old project.</p>
                     </div>
+                    <!--
                     <div class="read">
                         <a href="#">More</a>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -373,7 +377,7 @@ $headers = 'From: '.$email_from."\r\n".
     <div class="container">
         <h1 style="text-align: center;">More Work</h1>
         <ul id="myContent"> 			
-            <li><div class="effect-moses"><a href="/golden.html" target="_blank"><img src="/img/proj/hands.png" alt="" /></a>
+            <li><div class="effect-moses"><a class="tnlink" href="/golden.html" target="_blank"><img src="/img/proj/hands.png" alt="" /></a>
                 <figcaption>
 							<p>Direction</p>
 							<p>Cinematography</p>
@@ -390,7 +394,7 @@ $headers = 'From: '.$email_from."\r\n".
                     <i class="fa fa-google"></i></a>
                     <a class="icon" href="https://twitter.com/share?url=https://vimeo.com/63204198&amp;text=Golden%20;via truenorsefilms" target="_blank">
                     <i class="fa fa-twitter"></i></a>
-                    <a href="/golden.html">read more</a>
+                    <a class="tnlink" href="/golden.html">read more</a>
                 </div>
             </li>
             <li><div class="effect-moses"><a href="https://vimeo.com/102868220" target="_blank"><img src="/img/proj/deeply-1.png" alt="" /></a>
@@ -430,7 +434,7 @@ $headers = 'From: '.$email_from."\r\n".
                     <i class="fa fa-google"></i></a>
                     <a class="icon" href="https://twitter.com/share?url=https://vimeo.com/121327040&amp;text=Raidho%20by%20True%20Norse%20Films&amp;" target="_blank">
                     <i class="fa fa-twitter"></i></a>
-                    <a href="/air-between-us.html">read more</a>
+                    <a class="tnlink" href="/air-between-us.html">read more</a>
                 </div>
             </li>
             <li><div class="effect-moses"><a href="https://vimeo.com/137496371" target="_blank"><img src="/img/proj/fra-asken.png" alt="" /></a>
@@ -451,11 +455,11 @@ $headers = 'From: '.$email_from."\r\n".
                     <i class="fa fa-google"></i></a>
                     <a class="icon" href="https://twitter.com/share?url=https://vimeo.com/137496371&amp;text=Raidho%20by%20True%20Norse%20Films&amp;" target="_blank">
                     <i class="fa fa-twitter"></i></a>
-                    <a href="/fra-asken.html">read more</a>
+                    <a class="tnlink" href="/fra-asken.html">read more</a>
                 </div>
             </li>
         </ul> 
-        <a style="text-decoration: none;" href="/projects.html"><button>See more projects</button></a>
+        <a style="text-decoration: none;" class="tnlink" href="/projects.html"><button>See more projects</button></a>
     </div>
 </section>
     
@@ -490,20 +494,20 @@ $headers = 'From: '.$email_from."\r\n".
     </div>
 </section>
    <section id="home-contact" class="container">
-    <footer class="footer-distributed">
+    <footer id="contact-bottom" class="footer-distributed">
 
 			<div class="footer-left">
                 
                 <img style="height: 100px;width: auto;" src="/img/True-Norse-black.png" />
 
 				<p class="footer-links">
-					<a href="#">Home</a>
+					<a  class="tnlink" href="">Home</a>
 					·
-					<a href="/projects.html">Projects</a>
+					<a  class="tnlink" class="tnlink" href="/projects.html">Projects</a>
                     ·
-                    <a href="/about-us.html">About us</a>
+                    <a  class="tnlink" class="tnlink" href="/about-us.html">About us</a>
 					·
-					<a href="#bg-3">Contact</a>
+					<a href="#contact-bottom">Contact</a>
 				</p>
 
 				<p class="footer-company-name">True Norse Films&copy; 2015</p>
