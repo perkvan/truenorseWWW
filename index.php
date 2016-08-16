@@ -248,7 +248,7 @@ $headers = 'From: '.$email_from."\r\n".
     <div id="featured" class="hideme container">
         <div id="item1" class="row">
           <div class="col-md-6">
-              <video playsinline muted autoplay loop poster id="video1" src="https://player.vimeo.com/external/63204198.hd.mp4?s=6e7aa97f997713aa9a42a29387b8f8d352549f36&profile_id=113" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></video>
+              <iframe id="video1" src="https://player.vimeo.com/video/63204198" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
               <div class="row">
                   <img class="col-xs-4" src="/img/laurel-runner-up.png"/>
                   <img class="col-xs-4" src="/img/laurel-best-mn.png"/>
@@ -316,7 +316,7 @@ $headers = 'From: '.$email_from."\r\n".
                     </div>
                     <div class="service-content">
                         <h3> Film </h3>
-                        <p>Let us help you capture those special moments, cover your story or give a personal identity to your business.</p>
+                        <p>Whether narrative, documentary, or business we feel that each story is unique and we strive to create films tat reflect those unique voices.<br><br> </p>
                     </div>
                     <!--
                     <div class="read">
@@ -361,7 +361,7 @@ $headers = 'From: '.$email_from."\r\n".
                     </div>
                     <div class="service-content">
                         <h3> Web </h3>
-                        <p>A website is essential to every modern day business. We can help usher you into the digital age or spruce up an old project.</p>
+                        <p>A website is essential to every modern day business. We can help usher you into the digital age or modernize an old project.<br><br> </p>
                     </div>
                     <!--
                     <div class="read">
@@ -406,7 +406,7 @@ $headers = 'From: '.$email_from."\r\n".
                 </div>
                 <div class="gallery-subcaption">
                     <h2>Deeply</h2>
-                    <p>Additional text could go here to make these objects more acccessible immediately. Perhaps a quick blurb on why they should click.</p>
+                    <p>Written, filmed, and edited over the course of three days. Requirement that it be 3 minutes or less.</p>
                     <p style="margin-top: 15px; display:inline-block; float: left; font-weight: bold; font-size: 10pt;">share:</p>
                     <a class="icon" href="http://www.facebook.com/sharer.php?u=https://vimeo.com/102868220" target="_blank">
                     <i class="fa fa-facebook"></i></a>
@@ -426,7 +426,7 @@ $headers = 'From: '.$email_from."\r\n".
                 </div>
                 <div class="gallery-subcaption">
                     <h2>Air Between Us</h2>
-                    <p>Additional text could go here to make these objects more acccessible immediately. Perhaps a quick blurb on why they should click.</p>
+                    <p>Air Between Us is a short feature teaser that explores the relationship between family and the length we go to for our family.</p>
                     <p style="margin-top: 15px; display:inline-block; float: left; font-weight: bold; font-size: 10pt;">share:</p>
                     <a class="icon" href="http://www.facebook.com/sharer.php?u=https://vimeo.com/121327040" target="_blank">
                     <i class="fa fa-facebook"></i></a>
@@ -447,7 +447,7 @@ $headers = 'From: '.$email_from."\r\n".
                 </div>
                 <div class="gallery-subcaption">
                     <h2>Fra Asken</h2>
-                    <p>Additional text could go here to make these objects more acccessible immediately. Perhaps a quick blurb on why they should click.</p>
+                    <p>A short film examining the recovery of a victim of sexual abuse. Starring Madeline Marsh &amp; Martin Curry</p>
                     <p style="margin-top: 15px; display:inline-block; float: left; font-weight: bold; font-size: 10pt;">share:</p>
                     <a class="icon" href="http://www.facebook.com/sharer.php?u=https://vimeo.com/137496371" target="_blank">
                     <i class="fa fa-facebook"></i></a>

@@ -287,8 +287,8 @@ ul {
 }
 
 #header {
-    margin-top: 15%;
-    margin-bottom: 45%;
+    margin-top: 12.5vh;
+    margin-bottom: 50vh;
 }
 
 .center {
@@ -463,6 +463,7 @@ ul {
     font: lighter 13px/20px "Open Sans";
     color: #012340;
     margin: 0 0 20px;
+    padding: 10px 0;
 }
 .serviceBox .read{
     padding: 30px 0;
@@ -1231,11 +1232,11 @@ fieldset {
     box-shadow: 1px 0 7.8px 0.2px rgba(0, 0, 0, 0.8);
     position: relative;
     padding: 20px 40px 40px 40px !important;
-    margin: 80vh auto 0 auto;
+    margin: 90vh auto 0 auto;
 }
 
 #about-intro {
-    margin-top: 5%;
+    margin-top: 5vh;
 }
 
 #about-intro h2 {
